@@ -1,0 +1,11 @@
+{
+ "modules": 716,
+ "repos": 267,
+ "exact_pairs": 5,
+ "near_pairs": 12,
+ "families": 261,
+ "multi_repo_families": 5,
+ "repos_in_multi": 11,
+ "largest_family": 3,
+ "exact_duplicate_modules": 5
+}

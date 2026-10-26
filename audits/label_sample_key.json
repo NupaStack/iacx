@@ -1,0 +1,3063 @@
+{
+ "sample": [
+  {
+   "repo": "chanzuckerberg/fogg",
+   "hash": "92ee41f0f1626c70d7c873828c6d27ec41467f42",
+   "ts": 1585834443,
+   "author": "Eduardo Lopez",
+   "subject": "[fix] Fix generation of remote backends (#447)",
+   "flag": 1,
+   "modules": [
+    "testdata/v2_full_yaml/terraform/envs/staging/vpc"
+   ],
+   "body": "Summary\nWe should only configure remote_states for sibling components of type terraform.\nFurthermore, remote some dead JSON code\n\nTest Plan\nunittests",
+   "id": "C001"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-dynamodb",
+   "hash": "28314abd0bdfbe3b2f4ca616e88140848380d4e2",
+   "ts": 1550547989,
+   "author": "Sahil",
+   "subject": "[Fix] Validation error when stream is disabled and stream view type is not empty string (#26)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "* [Fix] Validation error when stream is disabled and stream view type is not NULL\n\nPass empty string to stream view type when streams are not enabled\n\nRef: https://github.com/terraform-providers/terraform-provider-aws/issues/1134\n\n* [Fix] Resolving #discussion_r256473394\n\nReference: https://github.com/cloudposse/terraform-aws-dynamodb/pull/26#discussion_r256473394",
+   "id": "C002"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-address",
+   "hash": "a6d91de9ab21851f002c95a4fad5cfca70d257bc",
+   "ts": 1643760065,
+   "author": "Austin Howard",
+   "subject": "fix: Remove need for deprecated template terraform provider (#38)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/dns_forward_and_reverse"
+   ],
+   "body": "* Removing need for deprecated template terraform provider. Also fixing reverse DNS test (previously was not creating PTR records)\n\n* formatting tf file",
+   "id": "C003"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-lambda",
+   "hash": "59262f73668080560165a1086cc072d206060421",
+   "ts": 1712657521,
+   "author": "theprashantyadav",
+   "subject": "fix: update workflow latest version and change _example name",
+   "flag": 1,
+   "modules": [
+    "examples/basic-function",
+    "examples/basic-s3-function",
+    "examples/complete-function"
+   ],
+   "body": "",
+   "id": "C004"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-codebuild",
+   "hash": "c659c17ac386bc4c0da8c6c112d7b5595b37af1e",
+   "ts": 1507130476,
+   "author": "Andriy Knysh",
+   "subject": "Add default values to ENV vars and check if they are not empty (#10)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C005"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-iam",
+   "hash": "e4184f856edce73d86beadcec291ea4ce8c6438c",
+   "ts": 1607081649,
+   "author": "Yuji Kinjo",
+   "subject": "fix: automatically determine the number of role policy arns (#119)",
+   "flag": 1,
+   "modules": [
+    "examples/iam-assumable-role-with-oidc",
+    "modules/iam-assumable-role-with-oidc"
+   ],
+   "body": "",
+   "id": "C006"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "40502fd7623b069331b0f55aa72d512f2dcf063e",
+   "ts": 1720021084,
+   "author": "kirantejaj",
+   "subject": "Fix: For error_message of variable - maintenance_interval (#411)",
+   "flag": 1,
+   "modules": [
+    "modules/instance_template"
+   ],
+   "body": "",
+   "id": "C007"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "3834d5a5acad771dc6ed15ae6e626f482647c2a7",
+   "ts": 1666399914,
+   "author": "Brett Randall",
+   "subject": "Update peering examples: Fix plan-dependency on vpc peering. (#199)",
+   "flag": 1,
+   "modules": [
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-rbac"
+   ],
+   "body": "",
+   "id": "C008"
+  },
+  {
+   "repo": "chanzuckerberg/fogg",
+   "hash": "2c658460617f6714ddf6d06ddd67945bcc26ec8c",
+   "ts": 1587573423,
+   "author": "Ryan King",
+   "subject": "[refactor] aws provider into common template (#466)",
+   "flag": 0,
+   "modules": [
+    "testdata/v2_full_yaml/terraform/envs/staging/vpc"
+   ],
+   "body": "[refactor] aws provider into common templateRefactor our aws provider configurations in to a common template that is shared across global, accounts and components.\n\nAlso push the logic for generating per-region providers from the templates to the planning stage.\n\n### Test Plan\n* [x] CI\n* [X] tested on 1 internal repo\n\n### References",
+   "id": "C009"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "4602516cdf6d8c331bf2fcd7438da464733ad340",
+   "ts": 1786972247,
+   "author": "J\u00e9r\u00f4me Respaut",
+   "subject": "feat(SREAA-368): upgrade module to v9 (OpenTofu >= 1.12, AzureRM ~> 5.0)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/files-aadfs-auth",
+    "examples/main",
+    "examples/multiple-sa"
+   ],
+   "body": "Align the module with the v9 baseline of the Claranet Azure module collection and\nmigrate the Storage Account code to the AzureRM 5.0 schema.\n\n* Require OpenTofu `>= 1.12` in `versions.tofu`\n* Bump the AzureRM provider constraint to `~> 5.0`\n* Bump the `azurecaf` provider constraint to `~> 1.3.0`\n* Bump the `claranet/diagnostic-settings/azurerm` module calls to `~> 9.0`\n* Update `TF_MIN_VERSION` and `AZURERM_PROVIDER_MIN_VERSION` in `.gitlab-ci.yml`\n* Apply the same OpenTofu and AzureRM constraints to the three `examples/`\n* Sync `.config/terraform-docs.yml` and `.config/tflint.hcl` with the `ci` repository\n* Refresh `mise.lock` so it matches the tools pinned in `.tool-versions`\n* Regenerate `README.md` with `terraform-docs`\n\nAzureRM 5.0 code migration:\n\n* Move the inline `static_website` block of `azurerm_storage_account` to the dedicated\n  `azurerm_storage_account_static_website` resource in `r-static-website.tf`, keeping the\n  `static_website_config` variable as the module interface and carrying the\n  `StorageV2` / `BlockBlobStorage` restriction over as a `precondition`\n* Expose the new resource through the `resource_static_website` output\n* Replace `storage_account_name` with `storage_account_id` on `azurerm_storage_queue` and\n  `azurerm_storage_table`\n* Drop `customer_managed_key.managed_hsm_key_id`, removed by the provider, and make\n  `key_vault_key_id` mandatory as the provider schema now requires it\n* Constrain `min_tls_version` to `TLS1_2` with a validation so rejected values surface at\n  plan time instead of apply time\n\nBREAKING CHANGES: the minimum OpenTofu version is raised to `1.12` and the AzureRM\nprovider is constrained to `~> 5.0`, so consumers must upgrade both before using this\nrelease. Static website settings now live in a separate resource, so consumers already\nusing `static_website_config` must import it with\n`tofu import 'module.<name>.azurerm_storage_account_static_website.main[0]' <storage_account_id>`\nbefore applying, otherwise the plan recreates the configuration. The\n`customer_managed_key.managed_hsm_key_id` attribute is gone and Managed HSM keys must be\nsupplied through `key_vault_key_id`, which is now a required attribute of the\n`customer_managed_key` object instead of an optional one. `min_tls_version` no longer\naccepts `TLS1_0` or `TLS1_1`. The `diagnostic-settings` submodule moves to `~> 9.0`, which\nrequires AzureRM `~> 5.0` as well. Two provider-level behaviour changes shipped with\nAzureRM 5.0 also apply: `resource_provider_registrations` now defaults to `none` instead of\n`legacy`, so no resource provider is registered automatically anymore, and the\n`enhanced_validation` block moved inside `features` with location and resource provider\nvalidation now disabled by default, which defers those errors from plan time to apply time.",
+   "id": "C010"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-composer",
+   "hash": "3a1202878cdbb0c0ed7c1ea6d122cc8b51e8bc5c",
+   "ts": 1737610425,
+   "author": "Nicolas Lev\u00e9e",
+   "subject": "fix: (composer_net) warning because of null ip range in fw rules (#148)",
+   "flag": 1,
+   "modules": [
+    "modules/composer_net"
+   ],
+   "body": "Co-authored-by: Imran Nayer <imrannayer@google.com>",
+   "id": "C011"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-datadog-forwarders",
+   "hash": "fcb8a0beec2b6cd814c08caef42655c1a61b5922",
+   "ts": 1622860970,
+   "author": "Bryant Biggs",
+   "subject": "feat: add new release v3.32.0 and set as the default version - [ref](https://github.com/DataDog/datadog-serverless-functions/releases/tag/aws-dd-forwarder-3.32.0)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/log_forwarder",
+    "modules/rds_enhanced_monitoring_forwarder",
+    "modules/vpc_flow_log_forwarder"
+   ],
+   "body": "",
+   "id": "C012"
+  },
+  {
+   "repo": "azavea/terraform-aws-postgresql-rds",
+   "hash": "3cda0b0e9fb66c3dc6e908e92c83499a3b8aa843",
+   "ts": 1502229640,
+   "author": "Dag Viggo Lok\u00f8en",
+   "subject": "Add alarm for cpu credits when running on a burstable instance type",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C013"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "079605ad6b55d201393bb8225f142129e2fc2195",
+   "ts": 1709778726,
+   "author": "Bryant Biggs",
+   "subject": "fix: Update CI workflow versions to remove deprecated runtime warnings (#542)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C014"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "a45294813e55e8422196ab078178c7507d3b3862",
+   "ts": 1572463660,
+   "author": "Aaron Lane",
+   "subject": "Fix references to counted network resource",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C015"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-datadog-forwarders",
+   "hash": "da9bfa0d53e777db3a64affe39943af54163d542",
+   "ts": 1619091518,
+   "author": "Bryant Biggs",
+   "subject": "fix: upgrade s3 module to latest to support Terraform 0.15.x syntax (#6)",
+   "flag": 1,
+   "modules": [
+    "modules/log_forwarder"
+   ],
+   "body": "",
+   "id": "C016"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-datadog-forwarders",
+   "hash": "e772becdc0d69ad19fb858b01796598dc71adfee",
+   "ts": 1629419022,
+   "author": "Bryant Biggs",
+   "subject": "feat: add new release v3.38.0 and set as the default version - [ref](https://github.com/DataDog/datadog-serverless-functions/releases/tag/aws-dd-forwarder-3.38.0)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/log_forwarder",
+    "modules/rds_enhanced_monitoring_forwarder",
+    "modules/vpc_flow_log_forwarder"
+   ],
+   "body": "",
+   "id": "C017"
+  },
+  {
+   "repo": "elastic/terraform-provider-elasticstack",
+   "hash": "ffa37d3711058bbfdba057d1c4e0b0fceca4a9d1",
+   "ts": 1684920643,
+   "author": "Dmytro Onishchenko",
+   "subject": "Bump versions for 0.6.0",
+   "flag": 0,
+   "modules": [
+    "examples/cloud"
+   ],
+   "body": "",
+   "id": "C018"
+  },
+  {
+   "repo": "btobolaski/terraform-provider-linode",
+   "hash": "f17358424e156df7527741d43e49cf8e884a8eae",
+   "ts": 1536850763,
+   "author": "Marques Johansson",
+   "subject": "Revert \"remove incomplete (untested) data resources for now\"",
+   "flag": 1,
+   "modules": [
+    "examples"
+   ],
+   "body": "",
+   "id": "C019"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "8883d3ec8176ce80023469ea9fc46e03f9080afb",
+   "ts": 1652897527,
+   "author": "drewmullen",
+   "subject": "include outputs for nat gateways",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/transit_gateway"
+   ],
+   "body": "",
+   "id": "C020"
+  },
+  {
+   "repo": "neiman-marcus/terraform-aws-jenkins-ha-agents",
+   "hash": "5cd2a39b8616a3cbd96918666d6b88188b9fbcd3",
+   "ts": 1657226425,
+   "author": "Raul A Dominguez",
+   "subject": "Fixed bug in aws_subnets remediation",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C021"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-iam",
+   "hash": "2529fe6173f7540994a346066d5ab141144861e9",
+   "ts": 1571848290,
+   "author": "Pavel Zhukov",
+   "subject": "[test] Refactor tests to be declarative. [changelog] add changes. [readme] fix typos. [migration] Add migration guide from 3.0 to 4.0",
+   "flag": 1,
+   "modules": [
+    "modules/helper",
+    "test/fixtures/additive",
+    "test/fixtures/authoritative",
+    "test/fixtures/static-and-dynamic"
+   ],
+   "body": "",
+   "id": "C022"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "1cd8db8414bd45b3bb4389345bf1f2a6e7482b2f",
+   "ts": 1706795831,
+   "author": "Bryant Biggs",
+   "subject": "docs: Update examples to show inputs required for Atlantis vs the webhook (#396)",
+   "flag": 0,
+   "modules": [
+    "examples/github-complete",
+    "examples/github-separate"
+   ],
+   "body": "",
+   "id": "C023"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-codebuild",
+   "hash": "8d692b30c7e626d682630822851aa68e65646218",
+   "ts": 1583269337,
+   "author": "Theo Chatzimichos",
+   "subject": "Add codecommit:GitPull policy so that CodeBuild can be used against CodeCommit (#47)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Co-authored-by: Maxim Mironenko <simixido@gmail.com>",
+   "id": "C024"
+  },
+  {
+   "repo": "Azure/terraform-azurerm-loadbalancer",
+   "hash": "fa569e9e397c5daa04884c813c29e5a41af7605f",
+   "ts": 1673932869,
+   "author": "lonegunmanb",
+   "subject": "deprecate outdated syntax (#56)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Co-authored-by: zjhe <hezijie@microsoft.com>",
+   "id": "C025"
+  },
+  {
+   "repo": "jamesWoolfenden/pike",
+   "hash": "4c0302550fa3418b77c0e7e696af5d03ddb9bcee",
+   "ts": 1738597400,
+   "author": "James Woolfenden",
+   "subject": "moer aws resources",
+   "flag": 0,
+   "modules": [
+    "terraform/aws/backup"
+   ],
+   "body": "",
+   "id": "C026"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "c1e9a3dd48157ece8c8e2f76913a8bc2a51ad3b6",
+   "ts": 1663269140,
+   "author": "Vivek Goyal",
+   "subject": "Fixed transit_gateway_id variable description",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C027"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-vpc",
+   "hash": "67c1e9fc9947b0ebaca413dc49fc0d1e1578f354",
+   "ts": 1538835918,
+   "author": "Anton Babenko",
+   "subject": "Fixed #177 - public_subnets should not always be validated",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C028"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "c00014309078eb2ec89ee77b9d30579c0feb5bac",
+   "ts": 1637160479,
+   "author": "Michael Warkentin",
+   "subject": "chore: Fixed typo in Ephemeral (#238)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C029"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "8c043c77f4f46c1d0cfd98055b71ce64901a13cb",
+   "ts": 1554892076,
+   "author": "Joshua Kite",
+   "subject": "wording",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C030"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "1245fac0c34e09e3145fa0f1a6084c9465097273",
+   "ts": 1615741747,
+   "author": "Bryant Biggs",
+   "subject": "fix: update subnet group to fix name vs name_prefix (#312)",
+   "flag": 1,
+   "modules": [
+    "",
+    "modules/db_subnet_group"
+   ],
+   "body": "",
+   "id": "C031"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "b07182a0d8ffd9bb8a97b421c73ee9c1cac97551",
+   "ts": 1683233074,
+   "author": "zhenli00",
+   "subject": "Fix typos  (#477)",
+   "flag": 1,
+   "modules": [
+    "examples/configurations/cluster-link-over-aws-private-link-networks"
+   ],
+   "body": "* fix typos\n\n* Update confluent_schema_registry_cluster_mode.md\n\n* revert \"required: true\" field\n\n* revert any code change",
+   "id": "C032"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "07304e1d68ea193e655ddaae711f657044ace067",
+   "ts": 1654624423,
+   "author": "drewmullen",
+   "subject": "include tgw rt assocation, re-organize rsc",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/transit_gateway"
+   ],
+   "body": "",
+   "id": "C033"
+  },
+  {
+   "repo": "terraform-linters/tflint",
+   "hash": "6d3096221c8d950e89a36473f1936a37fac8b54a",
+   "ts": 1644670753,
+   "author": "Kazuma Watanabe",
+   "subject": "Add missing E2E test cases (#1313)",
+   "flag": 1,
+   "modules": [
+    "integrationtest/inspection/conditional"
+   ],
+   "body": "",
+   "id": "C034"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-account",
+   "hash": "9c3a1070c8b847f38cd2134dfbaf0c6ace05831d",
+   "ts": 1669198113,
+   "author": "Byungjin Park (Claud)",
+   "subject": "Add iam-saml-identity-provider module (#48)",
+   "flag": 0,
+   "modules": [
+    "modules/iam-oidc-identity-provider",
+    "modules/iam-saml-identity-provider"
+   ],
+   "body": "",
+   "id": "C035"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-vnet",
+   "hash": "d87265ad8625efe29222d78b476efd21296f94b8",
+   "ts": 1787045345,
+   "author": "J\u00e9r\u00f4me Respaut",
+   "subject": "fix(SREAA-368): align v9 branch with current pipeline and provider constraints",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "The v9 upgrade on this branch predates two clarifications now recorded in the shared `AGENTS.md`\nv9 instructions, so the branch still carried the interim values.\n\n* Point the `.gitlab-ci.yml` include `ref` back at `master`. The v9 pipeline changes are merged\n  and released in the `ci` repository as `9.0.0`, so the temporary `v9/SREAA-368` ref is no longer\n  needed and would pin the pipeline to a development branch.\n\n* Bump the `azurecaf` provider constraint from `>= 1.2.28` to `~> 1.3.0`, which is the constraint\n  carried by the v9 module template and avoids resolving an older major.",
+   "id": "C036"
+  },
+  {
+   "repo": "segmentio/stack",
+   "hash": "9d3c5b1bfcba546b78955c8203d54f14b448b513",
+   "ts": 1476229967,
+   "author": "Vincent Caggiari",
+   "subject": "mistyping",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C037"
+  },
+  {
+   "repo": "GoogleCloudPlatform/terraform-google-secret-manager",
+   "hash": "d5f21c806a94bf8b8c2f7862420af0e336856cd3",
+   "ts": 1754878445,
+   "author": "Zheng Qin",
+   "subject": "feat: Add per module requirements to secret-manager (#141)",
+   "flag": 0,
+   "modules": [
+    "test/setup"
+   ],
+   "body": "Co-authored-by: Zheng Qin <zhengqin@google.com>\nCo-authored-by: abhishek kumar tiwari <abhishektiwari571@gmail.com>",
+   "id": "C038"
+  },
+  {
+   "repo": "nozaq/terraform-aws-secure-baseline",
+   "hash": "7cf8fc1b6aacbc7167732cc3c47d33c4e5240563",
+   "ts": 1602292030,
+   "author": "will Farrell",
+   "subject": "fix: deprecation warnings (#140)",
+   "flag": 1,
+   "modules": [
+    "",
+    "modules/cloudtrail-baseline",
+    "modules/secure-bucket"
+   ],
+   "body": "",
+   "id": "C039"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-dms",
+   "hash": "8b674759d5b108123810d7b5cd910c7fae83dcbc",
+   "ts": 1635971092,
+   "author": "Bryant Biggs",
+   "subject": "fix: add variable and additional poicy document to allow redshift to assume the `dms-access-for-endpoint` IAM role",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C040"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "5520f47da701550e46c3f861eac1c731299b5a40",
+   "ts": 1676392139,
+   "author": "drewmullen",
+   "subject": "remove awscc resources",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/flow_logs"
+   ],
+   "body": "",
+   "id": "C041"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-cognito",
+   "hash": "e7ad90d0b9b78acc10adeaec204ff4d8b9f99c0d",
+   "ts": 1684465301,
+   "author": "lucastercas",
+   "subject": "Fix type of `explicit_auth_flows`",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C042"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "0bc1906c9ed5e2f0534aeb64f96c8cc99ba92def",
+   "ts": 1776749128,
+   "author": "release-please[bot]",
+   "subject": "chore(main): release 15.1.0 (#578)",
+   "flag": 0,
+   "modules": [
+    "modules/compute_disk_snapshot",
+    "modules/compute_instance",
+    "modules/instance_template",
+    "modules/mig",
+    "modules/mig_with_percent",
+    "modules/preemptible_and_regular_instance_templates",
+    "modules/umig"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",
+   "id": "C043"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-secrets-manager",
+   "hash": "86d588c1c0aa843cc6b25117d402a9d03e3e10f1",
+   "ts": 1693586270,
+   "author": "Anmol Nagpal",
+   "subject": "Naming foramt fixed",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C044"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-inspector",
+   "hash": "3a411dd2d9e31f610424836bb6a38dbe3fa0b12b",
+   "ts": 1643172806,
+   "author": "renovate[bot]",
+   "subject": "Update Terraform cloudposse/iam-role/aws to v0.15.0 (#20)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "* Update Terraform cloudposse/iam-role/aws to v0.15.0\n\n* Auto Format\n\nCo-authored-by: Renovate Bot <bot@renovateapp.com>\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C045"
+  },
+  {
+   "repo": "Azure/terraform-azurerm-compute",
+   "hash": "d53e0a57398580b9250b0b8c7a0eab8e58bb1eb1",
+   "ts": 1509902623,
+   "author": "runecalico",
+   "subject": "Add space between variable name and starting { (#27)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Because the version of Terraform I'm using doesn't like it.",
+   "id": "C046"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-cognito",
+   "hash": "c001a769fe39ecf01c2e2f39e51b6d4cf4c6193e",
+   "ts": 1684347017,
+   "author": "lucastercas",
+   "subject": "Fix `admin_create_user_config`",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C047"
+  },
+  {
+   "repo": "terraform-docs/terraform-docs",
+   "hash": "bf0770694749439b95e2e22852d54404439fce14",
+   "ts": 1580584914,
+   "author": "Khosrow Moossavi",
+   "subject": "fix: Do not escape markdown table inside module header (#186)",
+   "flag": 1,
+   "modules": [
+    "examples"
+   ],
+   "body": "",
+   "id": "C048"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-eks",
+   "hash": "b8d9d6e755d37d8087f5f1b7b3ed4cc22da80965",
+   "ts": 1777883385,
+   "author": "Uchinda Padmaperuma",
+   "subject": "[PFMENG-5472] Fix: Default to inline IAM policy for Karpenter controller (#201)",
+   "flag": 1,
+   "modules": [
+    "modules/karpenter"
+   ],
+   "body": "",
+   "id": "C049"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-dynamodb",
+   "hash": "e016fc347dea6bde43905a5a781e514bf3ae8ac5",
+   "ts": 1535143995,
+   "author": "Andriy Knysh",
+   "subject": "Add support for `non_key_attributes`. Add examples (#18)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C050"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "615f488efe07635ad0eeaf0fb7b32d0708fbc116",
+   "ts": 1671702355,
+   "author": "Thierry Lei",
+   "subject": "AZ-964: Apply suggestion",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C051"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-eventbridge",
+   "hash": "03ef4ff5927259b53c4b10c9d90d39db78e80196",
+   "ts": 1674033118,
+   "author": "Howard Zhou",
+   "subject": "fix: Wrong value of api destination output (#79)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "Co-authored-by: howardzhou <howardzhou@kkstream.com>",
+   "id": "C052"
+  },
+  {
+   "repo": "jamesWoolfenden/pike",
+   "hash": "5dc2af922ce1002f49cde9280a60819d8fd7572c",
+   "ts": 1669802126,
+   "author": "James Woolfenden",
+   "subject": "redis and endpoint",
+   "flag": 0,
+   "modules": [
+    "terraform/azurerm/backup",
+    "terraform/azurerm/role"
+   ],
+   "body": "",
+   "id": "C053"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-codebuild",
+   "hash": "42ea8ddd3770fad5d70d08fc0f1ba5c266dff46c",
+   "ts": 1554014158,
+   "author": "Konrad Obal",
+   "subject": "fix: Add condition to manage creation of cache bucket policy (#39)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "Fixes #38",
+   "id": "C054"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "7c674a3b74e0ff5df0878006c9370e9c307fd15d",
+   "ts": 1597834600,
+   "author": "Micha\u0142 Augoff",
+   "subject": "fix: Fix policy attachments for managed policies (#45)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C055"
+  },
+  {
+   "repo": "aminueza/terraform-provider-minio",
+   "hash": "244298afc35346ce6d8635f47a8a55c5c1c43ca3",
+   "ts": 1684167336,
+   "author": "y-yagi",
+   "subject": "Fix an example value of `expiration` (#462)",
+   "flag": 1,
+   "modules": [
+    "examples/resources/minio_ilm_policy"
+   ],
+   "body": "The `expiration` must be a duration, or \"DeleteMarker\", and can't be set `int`.",
+   "id": "C056"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "f75938d2a46d349b397e240a94d1867e7170758e",
+   "ts": 1643306179,
+   "author": "joshuamkite",
+   "subject": "revert inapproriate merge",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C057"
+  },
+  {
+   "repo": "GoogleCloudPlatform/terraform-google-secret-manager",
+   "hash": "9eec076350e81678fe40e145ffbe4db2051e6bee",
+   "ts": 1718383505,
+   "author": "Mend Renovate",
+   "subject": "chore(deps): Update Terraform GoogleCloudPlatform/secret-manager/google to ~> 0.3 (#84)",
+   "flag": 0,
+   "modules": [
+    "examples/kms",
+    "examples/multiple",
+    "examples/pubsub",
+    "examples/simple"
+   ],
+   "body": "",
+   "id": "C058"
+  },
+  {
+   "repo": "neiman-marcus/terraform-aws-jenkins-ha-agents",
+   "hash": "70390c182f583d86371e5dd84f9014d0eb754400",
+   "ts": 1559771409,
+   "author": "Clay Danford",
+   "subject": "First release.",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/full",
+    "examples/minimum"
+   ],
+   "body": "",
+   "id": "C059"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-eventbridge",
+   "hash": "e601dec84f2878f5479eeadf9b05b624d7be96bf",
+   "ts": 1635234004,
+   "author": "juan-acevedo-ntt",
+   "subject": "fix: Fixed function name from to_map to tomap (#26)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C060"
+  },
+  {
+   "repo": "kumarvna/terraform-azurerm-application-gateway",
+   "hash": "dfff4ccfbe74762e4c5f4b1b38e9d2a387ddf4a6",
+   "ts": 1635106968,
+   "author": "kumarvna",
+   "subject": "updating http listeners configuraiton",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C061"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-iam",
+   "hash": "fcfd23e9a7832e6e8a294096f90fcbf1e28f2f34",
+   "ts": 1564665930,
+   "author": "pp",
+   "subject": "Fixes #4: Allow referencing computed value",
+   "flag": 1,
+   "modules": [
+    "examples/folder",
+    "examples/kms_crypto_key",
+    "examples/kms_key_ring",
+    "examples/organization",
+    "examples/project",
+    "examples/pubsub_subscription",
+    "examples/pubsub_topic",
+    "examples/service_account",
+    "examples/storage_bucket",
+    "examples/subnet",
+    "modules/folders_iam",
+    "modules/kms_crypto_keys_iam",
+    "modules/kms_key_rings_iam",
+    "modules/organizations_iam",
+    "modules/projects_iam",
+    "modules/pubsub_subscriptions_iam",
+    "modules/pubsub_topics_iam",
+    "modules/service_accounts_iam",
+    "modules/storage_buckets_iam",
+    "modules/subnets_iam"
+   ],
+   "body": "* Changed internal processing structure of `bindings`\n * Everything moved to submodules\n * Updated variables\n * Added `*_num` variables to make counts work with computed values\n * Updated examples\n * Updatet README.md\n * Added `subnets_region` variable\n * Added tests for subnets",
+   "id": "C062"
+  },
+  {
+   "repo": "segmentio/stack",
+   "hash": "eba4f21a77e195140355872c042180db8c6f3854",
+   "ts": 1485993762,
+   "author": "Tyson Mote",
+   "subject": "Add a module for RDS instances.",
+   "flag": 0,
+   "modules": [
+    "rds"
+   ],
+   "body": "",
+   "id": "C063"
+  },
+  {
+   "repo": "terraform-docs/terraform-docs",
+   "hash": "52653b5107c24bfafce9dcf29842e13a876acaab",
+   "ts": 1595006030,
+   "author": "Julien Duchesne",
+   "subject": "fix: Render special chars in variables' default value properly (#284)",
+   "flag": 1,
+   "modules": [
+    "examples"
+   ],
+   "body": "* Fix: No longer crashes when there are special chars in a variable default\n\n* Do not escape chars everywhere\n\n* Cleanup go.mod",
+   "id": "C064"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "4fd3c097ca88ef885b4a6678a9f44ab462f26960",
+   "ts": 1597835328,
+   "author": "Anton Babenko",
+   "subject": "chore: Set number_of_policies in example",
+   "flag": 0,
+   "modules": [
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C065"
+  },
+  {
+   "repo": "hashicorp/terraform",
+   "hash": "ebff0a468331dea1084497b297fb73dd2d2d0374",
+   "ts": 1773246699,
+   "author": "Daniel Schmidt",
+   "subject": "validate const is mutually exclusive with sensitive and ephemeral in variables",
+   "flag": 0,
+   "modules": [
+    "internal/configs/testdata/error-files"
+   ],
+   "body": "",
+   "id": "C066"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-log-export",
+   "hash": "511585e81b5c3960c09415f266c9cb828a9e663d",
+   "ts": 1699292061,
+   "author": "Daniel Andrade",
+   "subject": "feat: add support for Log Analytics in log bucket destination (#179)",
+   "flag": 0,
+   "modules": [
+    "examples/logbucket/project",
+    "modules/logbucket"
+   ],
+   "body": "Co-authored-by: Imran Nayer <imrannayer@google.com>",
+   "id": "C067"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-vpc",
+   "hash": "ec49d4334dec0448f2cec5e548f23d7d6e203a00",
+   "ts": 1574866892,
+   "author": "Ilia Lazebnik",
+   "subject": "Add Elastic File System & Cloud Directory VPC Endpoints (#355)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C068"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "72d887bb1694ffdef597daa8ec7896e0b85b6152",
+   "ts": 1592488428,
+   "author": "Andrew Hlynskyi",
+   "subject": "fix: Fixed issue with zip renaming on Windows platform (#32)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C069"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-vnet",
+   "hash": "f660ec83507f79aa4adc39d36f07e95718978075",
+   "ts": 1728388923,
+   "author": "J\u00e9r\u00f4me Respaut",
+   "subject": "feat(AZ-1088)!: module v8 structure and updates",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/main"
+   ],
+   "body": "BREAKING CHANGES: AzureRM Provider v4+ and OpenTofu 1.8+",
+   "id": "C070"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-cognito",
+   "hash": "2977906200a0a237d981feb2fa3f304d442158ee",
+   "ts": 1684342345,
+   "author": "lucastercas",
+   "subject": "Fix use of legacy splat operator",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C071"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "c66cd738f86b9cd0742d9838635970ef7b5743e4",
+   "ts": 1687699841,
+   "author": "Roman",
+   "subject": "feat!: Replace random password generation with manage master password, min AWS provider version increased to 5.0, `id` output replaced with `identifier` (#489)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete-mssql",
+    "examples/complete-mysql",
+    "examples/complete-oracle",
+    "examples/complete-postgres",
+    "examples/cross-region-replica-postgres",
+    "examples/enhanced-monitoring",
+    "examples/groups",
+    "examples/replica-mysql",
+    "examples/replica-postgres",
+    "examples/s3-import-mysql",
+    "modules/db_instance",
+    "modules/db_instance_automated_backups_replication",
+    "modules/db_option_group",
+    "modules/db_parameter_group",
+    "modules/db_subnet_group"
+   ],
+   "body": "Co-authored-by: Stephen Rayner <stephen.r.rayner@gmail.com>\nCo-authored-by: Bryant Biggs <bryantbiggs@gmail.com>",
+   "id": "C072"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-ecs",
+   "hash": "ab9028cd3aeeea1cafe429289cd67dd36f317465",
+   "ts": 1609329548,
+   "author": "Ajay Kumar Dhyani",
+   "subject": "Upgrade terraform version to 0.14 and update",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/auto-scaling",
+    "modules/ecs"
+   ],
+   "body": "",
+   "id": "C073"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-log-export",
+   "hash": "659babaaac364512c2efbf33441ae339cd623451",
+   "ts": 1698937241,
+   "author": "Awais Malik",
+   "subject": "fix: upgraded versions.tf to include minor bumps from tpg v5 (#173)",
+   "flag": 1,
+   "modules": [
+    "",
+    "modules/bigquery",
+    "modules/bq-log-alerting",
+    "modules/logbucket",
+    "modules/project",
+    "modules/pubsub",
+    "test/setup"
+   ],
+   "body": "",
+   "id": "C074"
+  },
+  {
+   "repo": "terraform-docs/terraform-docs",
+   "hash": "ab42f0d097d5246a446ad5ca450c2073c6a30bdc",
+   "ts": 1576093729,
+   "author": "Hugues Malphettes",
+   "subject": "Code blocks support for all formats. Single line break support (#123)",
+   "flag": 1,
+   "modules": [
+    "examples"
+   ],
+   "body": "*  HTML-ize code blocks inside a markdown table. Single line break.\n\n Add support for embedding markdown code blocks inside markdown tables\n\n Add support for single-line breaks: when the line ends with 2 spaces, place\n a single <br>.\n\n* Fix the testsuite, todo improve the escape code for document\n\n* Add the WithIndent testdata",
+   "id": "C075"
+  },
+  {
+   "repo": "nozaq/terraform-aws-secure-baseline",
+   "hash": "d0805ec5650eee9e24ae9eecb0cec6802b25b88d",
+   "ts": 1616883503,
+   "author": "bharanin",
+   "subject": "feat: add flag to allow recording global resources in all regions (#168)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Co-authored-by: nozaq <code@nozaq.com>",
+   "id": "C076"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-secrets-manager",
+   "hash": "8a05edfcbcceeb48b57df26d430e9a8a97a0c65d",
+   "ts": 1627457245,
+   "author": "anmolnagpal",
+   "subject": "update github action tag",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C077"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-cloud-router",
+   "hash": "d420730e068110658deef8df99075e40c4ed6357",
+   "ts": 1593534624,
+   "author": "Rafael Jesus",
+   "subject": "feat: make secondary_ip_range_names field optional (#8)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C078"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-efs",
+   "hash": "317dfe367a74b5e3ac2707d93307f0577064faf2",
+   "ts": 1612495069,
+   "author": "Cloud Posse Bot (CI/CD)",
+   "subject": "Update context.tf from origin source (#72)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "Co-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C079"
+  },
+  {
+   "repo": "jamesWoolfenden/pike",
+   "hash": "235382cfdbefbea0b780de89d3840919116507ca",
+   "ts": 1701337712,
+   "author": "James Woolfenden",
+   "subject": "wip",
+   "flag": 0,
+   "modules": [
+    "terraform/aws/role"
+   ],
+   "body": "",
+   "id": "C080"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "828c322ffa9022fcd8a8f799acd78b8ee44b77b9",
+   "ts": 1656603288,
+   "author": "Laurent Piroelle",
+   "subject": "AZ-130: Enable `large_file_share_enabled` by default",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C081"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-sns",
+   "hash": "7417f16f6a5c46608ba99e0cfd8a071843795f90",
+   "ts": 1757671130,
+   "author": "cloudOpsgenius",
+   "subject": "feat: terraform fmt updated",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C082"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-eventbridge",
+   "hash": "60f6246d4d938681183b3150c821c9cbacbd09b7",
+   "ts": 1652367818,
+   "author": "theprashantyadav",
+   "subject": "update github-action",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C083"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-elasticache",
+   "hash": "cdc870e425fd34a93f3e38adccf8eb4c8fd1ef1a",
+   "ts": 1733151345,
+   "author": "ottramst",
+   "subject": "fix: Change cloudwatch log group output to include all created log groups (#19)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/memcached-cluster",
+    "examples/redis-cluster",
+    "examples/redis-cluster-mode",
+    "examples/redis-global-replication-group",
+    "examples/redis-replication-group",
+    "examples/redis-replication-group-with-cluster-replica"
+   ],
+   "body": "",
+   "id": "C084"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-elasticache",
+   "hash": "2a02a2cf0fa4d62cee9a56f5be727b1bab7808cd",
+   "ts": 1725891294,
+   "author": "dszlawski-chaos",
+   "subject": "fix: Fix cache_usage_limits issue when empty map (default value) is provided. (#13)",
+   "flag": 1,
+   "modules": [
+    "modules/serverless-cache"
+   ],
+   "body": "",
+   "id": "C085"
+  },
+  {
+   "repo": "gaia-app/gaia",
+   "hash": "40f650e38be37dbf2f7caa89020c96eb8004263c",
+   "ts": 1572286495,
+   "author": "Julien WITTOUCK",
+   "subject": ":bug: : allow variable & output fields in any order",
+   "flag": 1,
+   "modules": [
+    "src/test/resources/hcl"
+   ],
+   "body": "",
+   "id": "C086"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-iam",
+   "hash": "3c59715be4f5fc54810bd6565b1f74f6a98679f2",
+   "ts": 1617794308,
+   "author": "Leandro Carneiro",
+   "subject": "feat: Add role unique_id output in iam-assumable-role module (#143)",
+   "flag": 0,
+   "modules": [
+    "modules/iam-assumable-role"
+   ],
+   "body": "",
+   "id": "C087"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-opensearch",
+   "hash": "d2f49ee23aef4604fef738d5e8d8b8b4bc955b1e",
+   "ts": 1744651183,
+   "author": "Goh Hong Yi",
+   "subject": "add support for multi-az with standby (#63)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C088"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "d11920cc40b30a3d3e46a037ce0e20dcf907da12",
+   "ts": 1730853764,
+   "author": "Andrew Peabody",
+   "subject": "chore: fix metadata and lint (#442)",
+   "flag": 1,
+   "modules": [
+    "examples/confidential_computing",
+    "examples/instance_template/confidential_computing",
+    "examples/umig/named_ports",
+    "examples/umig/simple",
+    "examples/umig/static_ips",
+    "modules/mig",
+    "modules/mig_with_percent"
+   ],
+   "body": "",
+   "id": "C089"
+  },
+  {
+   "repo": "devhelmhq/terraform-provider-devhelm",
+   "hash": "bb4e97d93ae32e78dab464550196400929d3bce6",
+   "ts": 1778014443,
+   "author": "caballeto",
+   "subject": "fix(monitor): correct status_code assertion docs + orphan-cleanup safety net (#16)",
+   "flag": 1,
+   "modules": [
+    "examples/resources/devhelm_monitor"
+   ],
+   "body": "Round-2 DevEx surfaced two issues with `assertions { type = \"status_code\" }`:\n\n1. **Docs example used `expected = 200`** (number). The API contract is\n   `String expected` (so it can carry \"200\", \"2xx\", \"200-299\"), and Jackson\n   silently coerces the number to \"200\" on store. The round-trip then trips\n   Terraform's \"Provider produced inconsistent result after apply\" check\n   AND, because the API call had already succeeded by then, leaves an\n   orphaned monitor server-side that no Terraform state file references.\n\n   Fix: example now uses `expected = \"200\"` with an inline comment\n   explaining why. Schema description for `assertions[].config` calls out\n   the type-strictness rule explicitly (status_code.expected is STRING,\n   response_time.thresholdMs is NUMBER).\n\n2. **Create-flow had no orphan rollback.** If `mapToState` or\n   `resp.State.Set` failed AFTER the API create, the monitor leaked.\n\n   Fix: thread a `cleanupOrphan` closure through Create and call DELETE\n   if either downstream step returns an error. Logged at Debug on success\n   and Warn on failure (so the leaked-id is visible to operators in\n   either case).\n\n   This does NOT cover the framework's post-Create consistency check\n   (which runs after our function returns and is what produced the\n   round-2 reports). The fix for that path is the doc/example change\n   above \u2014 once user values match the API's wire format, the matching\n   logic in `mapToState` produces consistent state and the framework\n   never errors. The cleanup closure protects against any future\n   internal failure in the same window.\n\nRound-2 DevEx friction P0 #1 + P0 #3 (see /tmp/devex-cli-test/FRICTION-TABLE.md).\n\nCo-authored-by: Cursor <cursoragent@cursor.com>",
+   "id": "C090"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "801fa4a5fc5efedd21d576de750a93ebf21680c2",
+   "ts": 1685639531,
+   "author": "darrenhorwitz1",
+   "subject": "fix: reverted changes on for ipv6 support cwan example",
+   "flag": 1,
+   "modules": [
+    "examples/cloud_wan"
+   ],
+   "body": "",
+   "id": "C091"
+  },
+  {
+   "repo": "nozaq/terraform-aws-secure-baseline",
+   "hash": "d9ccfc838f091c5e78dad84c8d0ffff07f39749a",
+   "ts": 1554245766,
+   "author": "nozaq",
+   "subject": "fix: remove a default subnet resource",
+   "flag": 1,
+   "modules": [
+    "modules/vpc-baseline"
+   ],
+   "body": "It seems AWS does not create a default subnet when they add a new\navailability zone, causing \"Default subnet not found\" error.",
+   "id": "C092"
+  },
+  {
+   "repo": "GoogleCloudPlatform/terraform-google-secret-manager",
+   "hash": "c87f5fa5accab89e9b5b276bc68ccccf338c8079",
+   "ts": 1736397027,
+   "author": "abhishek kumar tiwari",
+   "subject": "fix!: make secret_data required to create secret version in simple-secret module (#116)",
+   "flag": 1,
+   "modules": [
+    "modules/simple-secret"
+   ],
+   "body": "",
+   "id": "C093"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-dynamodb",
+   "hash": "3468579a01ab2eb46719b183c4831c4e8203c52b",
+   "ts": 1531383983,
+   "author": "Vadim Hleif",
+   "subject": "Migrate readme yaml (#11)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "* Migrate readme yaml",
+   "id": "C094"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-account",
+   "hash": "05f0ce96047027936cb9bbf1de5cce56b62f007f",
+   "ts": 1670867141,
+   "author": "Byungjin Park (Claud)",
+   "subject": "Improve federated features for iam-role module (#51)",
+   "flag": 0,
+   "modules": [
+    "examples/github-trusted-iam-roles",
+    "modules/iam-role"
+   ],
+   "body": "",
+   "id": "C095"
+  },
+  {
+   "repo": "kumarvna/terraform-azurerm-container-registry",
+   "hash": "2075333b50bfc7e90d4e9c897ab982e9435875c9",
+   "ts": 1629138509,
+   "author": "kumarvna",
+   "subject": "updating georeplicaton configuration",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C096"
+  },
+  {
+   "repo": "GoogleCloudPlatform/terraform-google-secret-manager",
+   "hash": "4494e354495771294bb660f01360211ce4b3e73f",
+   "ts": 1712175081,
+   "author": "arairyus",
+   "subject": "fix: google_secret_manager_secret_iam_binding.binding for_each (#72)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C097"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-eks",
+   "hash": "46b8a9094790804132f288fe37f68d37f5c910ef",
+   "ts": 1690187470,
+   "author": "Poh Peng Ric Wang",
+   "subject": "Fix for pure fargate cluster trying to create a cluster security group rule to non existing node security group source (#91)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "* Add depends on for fresh fargate\n\n* test data setting\n\n* fix fresh fargate problem with flag to disable sec group creation during pure fargate cluster\n\n* remove depends on\n\n* Update main.tf\n\nCo-authored-by: Niro <46478191+niroz89@users.noreply.github.com>\n\n* use node_sec_group instead\n\n* Use cluster sec group flag instead\n\n---------\n\nCo-authored-by: Poh Peng <thepoppingone@users.noreply.github.com>\nCo-authored-by: Niro <46478191+niroz89@users.noreply.github.com>",
+   "id": "C098"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "e3224131ed5cb57e60fe248d79939df35637bf02",
+   "ts": 1767014156,
+   "author": "Umm-E-Kulsum",
+   "subject": "feat!: add project_id as explicit input to compute_instance module (#554)",
+   "flag": 0,
+   "modules": [
+    "examples/compute_instance/disk_snapshot",
+    "examples/compute_instance/simple",
+    "examples/confidential_computing",
+    "examples/confidential_computing_intel",
+    "modules/compute_instance"
+   ],
+   "body": "Co-authored-by: UMM KULSUM <kulsumeumm@google.com>",
+   "id": "C099"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-opensearch",
+   "hash": "891a32adee5cbee8f82d267a09e0b6fbf5cb7e6a",
+   "ts": 1702622571,
+   "author": "abhinavkumarsph",
+   "subject": "feat: support OR1 instance types for data nodes (#23)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C100"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "ccc18d5659401b83154bc0040a61faa3a2527281",
+   "ts": 1608799926,
+   "author": "Rich",
+   "subject": "feat: support custom platform version (#170)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/github-complete"
+   ],
+   "body": "",
+   "id": "C101"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "2adc566aa37d564e9b87b3183cb8195b5fa11958",
+   "ts": 1703476955,
+   "author": "Julliano Goncalves",
+   "subject": "feat!: Add dynamic block to define secondary subnets (#523)",
+   "flag": 0,
+   "modules": [
+    "modules/subnets",
+    "modules/subnets-beta"
+   ],
+   "body": "Signed-off-by: Julliano Goncalves <jullianow@gmail.com>\nCo-authored-by: Imran Nayer <imrannayer@google.com>\nCo-authored-by: Andrew Peabody <andrewpeabody@google.com>",
+   "id": "C102"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-vpc",
+   "hash": "8634bcda8fd2e9696f5e7b319eb10677fa88ca31",
+   "ts": 1603300189,
+   "author": "Jeremy Ciak",
+   "subject": "fix: Resource aws_default_network_acl orphaned subnet_ids (#530)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/network-acls"
+   ],
+   "body": "",
+   "id": "C103"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-autoscaling",
+   "hash": "d361057574eea73b6f4c2f1ce39ab9afad1e3f5f",
+   "ts": 1521027876,
+   "author": "Michael Lucas",
+   "subject": "ref #12 #1 - resolve tagging format difference (#19)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "* ref #12 #1 - added support for up to 10 custom tags in the same format\nas all other aws resources by using interpolation in local variables\nthat split and rejoin in appropriate format.\n\n* ref #12 #1 - updated readme with additional tag input option",
+   "id": "C104"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "3e2c8cdeb2d0e6f1fe53bc2d0a9369c9dc59f013",
+   "ts": 1579641971,
+   "author": "Bharath KKB",
+   "subject": "Fix: derive project id for instance from instance template (#63)",
+   "flag": 1,
+   "modules": [
+    "examples/compute_instance/simple",
+    "modules/compute_instance"
+   ],
+   "body": "* get project id from instance template selflink\n\n* pass subnet selflink instead of name fixture",
+   "id": "C105"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "f4052c758219898a1329497622303bde77f83741",
+   "ts": 1576840825,
+   "author": "Anton Babenko",
+   "subject": "Mark password as sensitive (closes #98)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C106"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-log-export",
+   "hash": "430160515e1f83b12c0316f3e0ab1639260fa4cc",
+   "ts": 1724870389,
+   "author": "release-please[bot]",
+   "subject": "chore(master): release 9.0.0 (#225)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/bigquery",
+    "modules/logbucket",
+    "modules/project",
+    "modules/pubsub",
+    "modules/storage"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",
+   "id": "C107"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-opensearch",
+   "hash": "9d44cec9a9d7d3c966a6f407529d3438c5b58cde",
+   "ts": 1740715205,
+   "author": "Alexa Perlov",
+   "subject": "feat: adding tags to collection",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C108"
+  },
+  {
+   "repo": "cloudandthings/terraform-aws-clickops-notifier",
+   "hash": "ade5f2e582ffd51a51500308407e9d5b610ca7f7",
+   "ts": 1667028011,
+   "author": "Paul Zietsman",
+   "subject": "feat: Allow user provided IAM role (#32)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/basic",
+    "examples/role"
+   ],
+   "body": "feat: Allow user provided IAM role\nci: Add basic deployment tests",
+   "id": "C109"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-rds",
+   "hash": "9a218ceeebfc063a0e4ba501d0251550710fadfe",
+   "ts": 1655766576,
+   "author": "elkh510",
+   "subject": "fix 'Warning: Argument is deprecated' db_name (#140)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "* fix 'Warning: Argument is deprecated' \n\n\u2502 Warning: Argument is deprecated\n\u2502 \n\u2502   with module.rds_instance.aws_db_instance.default,\n\u2502   on .terraform/modules/rds_instance/main.tf line 26, in resource \"aws_db_instance\" \"default\":\n\u2502   26:   name                  = var.database_name\n\u2502 \n\u2502 Use db_name instead\n\u2502 \n\u2502 (and one more similar warning elsewhere)\n\n* Update versions.tf\n\n* Auto Format\n\n* Update versions.tf\n\n* Update versions.tf\n\n* Auto Format\n\nCo-authored-by: nitrocode <7775707+nitrocode@users.noreply.github.com>\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C110"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-vm",
+   "hash": "61310dbdabeaf0672cef75e0c4a62f94edde2c95",
+   "ts": 1564776976,
+   "author": "Kunpei Sakai",
+   "subject": "add description in public outputs",
+   "flag": 0,
+   "modules": [
+    "modules/instance_template",
+    "modules/preemptible_and_regular_instance_templates"
+   ],
+   "body": "",
+   "id": "C111"
+  },
+  {
+   "repo": "devhelmhq/terraform-provider-devhelm",
+   "hash": "c5826a443d65403307772ba80719923b2feb4d55",
+   "ts": 1776516578,
+   "author": "caballeto",
+   "subject": "fix(examples): correct assertion config + status-page branding examples (#4)",
+   "flag": 1,
+   "modules": [
+    "examples/resources/devhelm_monitor"
+   ],
+   "body": "The bundled examples and the auto-generated docs site were rendering API\nconfigurations that the platform rejects. A v0.1.0-alpha.4 production smoke\ntest surfaced four issues, all in copy-paste-ready snippets:\n\n1. status_code assertion missing the required `operator` field. The API has\n   required `operator` since March 2026 (StatusCodeAssertion DTO).\n2. response_time assertion using snake_case `threshold_ms`. API field names\n   inside the assertion `config` JSON are camelCase (`thresholdMs`); the\n   Terraform-attribute snake_case convention does not apply inside JSON\n   payloads.\n3. Status-page `hide_powered_by = true` shown without noting it requires a\n   Business plan. Lower tiers receive a 400.\n4. Misleading example in MonitorResource schema description for\n   `assertions.config` \u2014 it showed `expected = 200` (no operator) and\n   propagated through tfplugindocs into the public registry docs.\n\nChanges:\n- examples/resources/devhelm_monitor/resource.tf: add `operator = \"equals\"`,\n  use `thresholdMs`, add a clarifying comment.\n- examples/resources/devhelm_status_page/resource.tf: comment out\n  `hide_powered_by` with a plan-tier note.\n- internal/provider/resources/monitor.go: fix the schema description\n  example so the registry-rendered help text is correct.\n- templates/guides/getting-started.md.tmpl: same assertion fixes.\n- docs/* regenerated via `make docs`.\n\nThe provider code itself is unchanged \u2014 these were all hand-authored example\nartifacts that were never executed against the API. Fixing the bundled\nexamples-as-CI gap is a separate follow-up.\n\nMade-with: Cursor",
+   "id": "C112"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-sns",
+   "hash": "01d66e0a34d134693f3c560fe983b0ddce9e63ad",
+   "ts": 1602239917,
+   "author": "himanshu-uniyal",
+   "subject": "Upgraded",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C113"
+  },
+  {
+   "repo": "jamesWoolfenden/pike",
+   "hash": "4ba42994e0285a341f30f31e9ccbf05aeb39f752",
+   "ts": 1751357606,
+   "author": "James Woolfenden",
+   "subject": "networks group fix",
+   "flag": 1,
+   "modules": [
+    "terraform/google/role"
+   ],
+   "body": "",
+   "id": "C114"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-eventbridge",
+   "hash": "f7d0782ee571604389a5e2ebf7f25dcf59ed7709",
+   "ts": 1728341035,
+   "author": "pre-commit-ci[bot]",
+   "subject": "[pre-commit.ci] auto fixes from pre-commit.com hooks",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/event_bus_archive",
+    "examples/event_rule_target"
+   ],
+   "body": "for more information, see https://pre-commit.ci",
+   "id": "C115"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "28bc8420239078f40e5328f541bdac327321515d",
+   "ts": 1535542811,
+   "author": "Joshua Kite",
+   "subject": "correct output variable class",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C116"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-vpc",
+   "hash": "d1adf743b27ef131b559ec15c7aadc37466a74b9",
+   "ts": 1642083046,
+   "author": "Bryant Biggs",
+   "subject": "fix: Update tags for default resources to correct spurious plan diffs (#730)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/manage-default-vpc",
+    "examples/network-acls",
+    "examples/outpost",
+    "examples/secondary-cidr-blocks"
+   ],
+   "body": "",
+   "id": "C117"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-route53",
+   "hash": "8bf1f5b07b1213e61768170d87dc5e7a03a87328",
+   "ts": 1614628532,
+   "author": "Bryant Biggs",
+   "subject": "fix: correct documentation based on update by `terraform_docs` (#31)",
+   "flag": 1,
+   "modules": [
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C118"
+  },
+  {
+   "repo": "segmentio/stack",
+   "hash": "fd4913ee010e49291014f7aaf18c28a4ee9cc96f",
+   "ts": 1475796016,
+   "author": "Vincent Caggiari",
+   "subject": "mistyping patch",
+   "flag": 1,
+   "modules": [
+    "ecs-cluster"
+   ],
+   "body": "",
+   "id": "C119"
+  },
+  {
+   "repo": "chanzuckerberg/fogg",
+   "hash": "ac310fe016123d14d86095a230ea595859d9883d",
+   "ts": 1683151187,
+   "author": "Jake Heath",
+   "subject": "feat: allow for users to add aliased providers",
+   "flag": 0,
+   "modules": [
+    "testdata/tfe_config/terraform/tfe",
+    "testdata/v2_full_yaml/terraform/envs/prod/vpc",
+    "testdata/v2_full_yaml/terraform/envs/staging/vpc",
+    "testdata/v2_no_aws_provider_yaml/terraform/envs/staging/vpc"
+   ],
+   "body": "",
+   "id": "C120"
+  },
+  {
+   "repo": "elastic/terraform-provider-elasticstack",
+   "hash": "afb16c8df512fc7bc8f89076e53149c16b09a1ca",
+   "ts": 1784707105,
+   "author": "Toby Brain",
+   "subject": "test: isolate entity-store acceptance tests per Kibana space (#4254)",
+   "flag": 0,
+   "modules": [
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_basic/list",
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_entityId/entity_id",
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_filter/filter",
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_filterQuery/filter_query",
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_pageMode/page_mode",
+    "internal/kibana/security_entity_store/entities/testdata/TestAccDataSourceKibanaSecurityEntityStoreEntities_spaceId/space_id",
+    "internal/kibana/security_entity_store_entity_link/testdata/TestAccResourceSecurityEntityStoreEntityLink/create",
+    "internal/kibana/security_entity_store_entity_link/testdata/TestAccResourceSecurityEntityStoreEntityLink/update",
+    "internal/kibana/security_entity_store_entity_link/testdata/TestAccResourceSecurityEntityStoreEntityLink_SingleElement/single_element",
+    "internal/kibana/security_entity_store_resolution_group/testdata/TestAccDataSourceSecurityEntityStoreResolutionGroup/read"
+   ],
+   "body": "* test(security_entity_store): use per-test random Kibana spaces in acc tests\n\nPass a generated space_id through ConfigVariables in all nine acceptance\ntests so concurrent runs do not share the default-space entity store singleton.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): fix Task 1 sdkacctest path and test count\n\nAlign tasks.md with terraform-plugin-testing/helper/acctest and nine\nlisted acceptance tests (8 resource + 1 data source).\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): correct security_entity_store acc test count in design\n\nDocument nine acceptance tests (8 resource + 1 data source) for the\nsecurity_entity_store package inventory.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* test(security_entity_store): isolate acc fixtures with per-test Kibana spaces\n\nWire entity store and status data source fixtures to randomized space_id\nso acceptance tests no longer share the default-space singleton.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): fix security_entity_store fixture file count to 11\n\nTask 2 and design inventories listed 11 main.tf paths but said 10 files.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Isolate entities data source acc tests with per-test Kibana spaces\n\nGenerate a random space_id per test, pass it via ConfigVariables, and\ntarget CleanupEntityStore at tests that install the store so concurrent\npackages no longer collide on the default-space singleton.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* test(entities): isolate entity store entities acc fixtures per Kibana space\n\nWire space_id through all entities data source acceptance fixtures so tests\nalign with Task 3 ConfigVariables and avoid singleton store races.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): fix entities fixture count and Task 4 space_id scope\n\nAlign design inventory with eight listed entities fixtures and note entity\nresources in Task 4 wiring requirements.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Isolate entity resource acc tests with per-test Kibana spaces\n\nEach acceptance test generates a random space ID and passes it through\nConfigVariables so concurrent runs do not share the default-space store\nsingleton; plan-time validation tests omit store cleanup.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): correct entity package acc test count to 11\n\nTask 5 and design inventory listed 10 functions but named 11; document\n7 apply-path tests and 4 plan-time validation tests.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Isolate entity resource acc fixtures with per-test Kibana spaces\n\nWire space_id through all entity package Terraform fixtures so acceptance\ntests match the randomized space variables from Task 5.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): align entity fixture counts and plan-time note\n\nTask 6 lists 12 main.tf fixtures; Task 5 clarifies plan-time tests still\ndeclare store resources but never install them because apply never runs.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Isolate entity-link acc tests with per-test Kibana spaces\n\nWire random space_id, ConfigVariables on every step, and dynamic\nCleanupEntityStore for live tests so link acceptance tests match the\nentity-store isolation pattern ahead of fixture updates in Task 8.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): list entity-link acc and validation test files\n\nTask 7 spans acc_test.go and validation_test.go where the third\nacceptance test is defined; align design inventory with that split.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Wire entity-link acceptance fixtures to per-test Kibana spaces\n\nAdd space_id variables and kibana_space resources so entity-link acc tests match the isolated-space pattern from Task 7.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Isolate resolution-group acc test with per-test Kibana space\n\nPass a random space_id via ConfigVariables and align cleanup and\ncomposite id assertions so the test matches the entity-store isolation pattern.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Wire resolution-group read fixture to per-test Kibana space\n\nAlign the acceptance Terraform config with Task 9 space_id injection so entity store tests no longer share the default space.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* docs(openspec): use full path for resolution-group fixture\n\nTask 10 and design reference the read/main.tf fixture from the repository root so paths are unambiguous.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Add 9.4.2 to CI provider matrix for entity-store test coverage\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Mark entity-store test isolation verification checklist complete.\n\nValidated build, isolated and concurrent acceptance tests on Elastic Stack 9.4.2, and CI matrix placement.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* Fix proposal fixture file count to match implementation.\n\nThirty-seven main.tf fixtures span the five entity-store acceptance packages.\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\n\n* chore(openspec): archive fix-entity-store-test-isolation via verify-openspec\n\n* ci: trigger checks\n\n* Simplify\n\n---------\n\nCo-authored-by: Cursor <cursoragent@cursor.com>\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>\nCo-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>",
+   "id": "C121"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "166f71a0ad7373918164900e6a53fe26a9100d3c",
+   "ts": 1591542740,
+   "author": "Anton Babenko",
+   "subject": "fix: Computed values in number of policies",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C122"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "da5372d51b36b5c7bc9c018353ab227104aa01b3",
+   "ts": 1574797772,
+   "author": "Taylor Ludwig",
+   "subject": "lint/validate fixes",
+   "flag": 1,
+   "modules": [
+    "examples/simple_project",
+    "examples/simple_project_with_regional_network",
+    "examples/submodule_firewall"
+   ],
+   "body": "",
+   "id": "C123"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-global-accelerator",
+   "hash": "ed5978841566c92f1e95d72a7908762bc4844646",
+   "ts": 1728341042,
+   "author": "pre-commit-ci[bot]",
+   "subject": "[pre-commit.ci] auto fixes from pre-commit.com hooks",
+   "flag": 1,
+   "modules": [
+    "",
+    "_example"
+   ],
+   "body": "for more information, see https://pre-commit.ci",
+   "id": "C124"
+  },
+  {
+   "repo": "hashicorp/terraform",
+   "hash": "64cf53bd7e4e4b660c39fd4c27318b8716fd12cf",
+   "ts": 1655828025,
+   "author": "Alisdair McDiarmid",
+   "subject": "configs: Fix check block configuration diagnostics",
+   "flag": 1,
+   "modules": [
+    "internal/configs/testdata/invalid-files"
+   ],
+   "body": "When validating self-references for resource and data source\npreconditions and postconditions, we previously did not nil-check the\nblock's condition field, which caused a panic when the block had no\ncondition.\n\nWhile fixing this I noticed that we were not validating that there are\nno self-references in the error message, so fixed that.",
+   "id": "C125"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-datadog-forwarders",
+   "hash": "b230c29fd2a1b0489b789cb180fad4930e6536fd",
+   "ts": 1607972554,
+   "author": "Bryant Biggs",
+   "subject": "fix: need to add in cipher context to kms encryption op",
+   "flag": 1,
+   "modules": [
+    "modules/rds_enhanced_monitoring_forwarder",
+    "modules/vpc_flow_log_forwarder"
+   ],
+   "body": "",
+   "id": "C126"
+  },
+  {
+   "repo": "GoogleCloudPlatform/terraform-google-secret-manager",
+   "hash": "6beaa663d4c4ed254fb9433664261846891f2dd5",
+   "ts": 1710197018,
+   "author": "Gal Birkman",
+   "subject": "fix: changed deprecated auto replication attribute (#31)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/simple"
+   ],
+   "body": "",
+   "id": "C127"
+  },
+  {
+   "repo": "nozaq/terraform-aws-secure-baseline",
+   "hash": "72a1c942d802fc0a995a76be5baf7c2dbfc23f85",
+   "ts": 1533003200,
+   "author": "Yong Wen Chua",
+   "subject": "Fix typo",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C128"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-autoscaling",
+   "hash": "37824138e8d98fc8179177bc5c92880be2282d84",
+   "ts": 1723587464,
+   "author": "Yethal",
+   "subject": "feat!: Allow multiple traffic source attachments (#273)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "* Allow multiple traffic source attachments\n\n* feat: Complete remaining breaking changes and add upgrade guide\n\n---------\n\nCo-authored-by: Bryant Biggs <bryantbiggs@gmail.com>",
+   "id": "C129"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-account",
+   "hash": "c213923256d5b8d83f71863eb7326caac966d16f",
+   "ts": 1757515756,
+   "author": "Byungjin Park (Claud)",
+   "subject": "feat: improve how to use resource_group in modules (#123)",
+   "flag": 0,
+   "modules": [
+    "modules/iam-oidc-identity-provider",
+    "modules/iam-policy",
+    "modules/iam-predefined-policies",
+    "modules/iam-role",
+    "modules/iam-saml-identity-provider",
+    "modules/iam-service-linked-role",
+    "modules/iam-user",
+    "modules/region"
+   ],
+   "body": "",
+   "id": "C130"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-iam",
+   "hash": "8fb0abca61498ae4c3be2c7493c190117cf9a366",
+   "ts": 1611077593,
+   "author": "Mateusz Hromada",
+   "subject": "fix: Remove deprecated syntax (#124)",
+   "flag": 1,
+   "modules": [
+    "modules/custom_role_iam",
+    "modules/pubsub_topics_iam"
+   ],
+   "body": "",
+   "id": "C131"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-opensearch",
+   "hash": "bb81ccb6444e41c850712f8837e883096deb5df8",
+   "ts": 1649201657,
+   "author": "Bruno da Silva Valenga",
+   "subject": "fix hostname on route53",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C132"
+  },
+  {
+   "repo": "terraform-docs/terraform-docs",
+   "hash": "8f74fd445301187ee96d31c396cad42a11f921bb",
+   "ts": 1716911142,
+   "author": "Khosrow Moossavi",
+   "subject": "feat: ignore outputs, providers, resources with comments",
+   "flag": 0,
+   "modules": [
+    "examples"
+   ],
+   "body": "Prepend any type of resource, including `resource`, `data`, `module`,\n`variable`, and `output` with a comment including \"terraform-docs-ignore\"\nto exclude it from the generated output.\n\nSigned-off-by: Khosrow Moossavi <khos2ow@gmail.com>",
+   "id": "C133"
+  },
+  {
+   "repo": "aws-ia/terraform-aws-vpc",
+   "hash": "72bd492767a4c0d00f71658d78a111510a23dd41",
+   "ts": 1666971705,
+   "author": "Pablo S\u00e1nchez Carmona",
+   "subject": "awscc version 0.36.0 - no error in core network policy",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/cloud_wan",
+    "examples/transit_gateway"
+   ],
+   "body": "",
+   "id": "C134"
+  },
+  {
+   "repo": "signalsciences/terraform-provider-sigsci",
+   "hash": "0a6b4ab3445fc1c1790f0394d4b3bd5c381beea3",
+   "ts": 1613762364,
+   "author": "John Hanrahan",
+   "subject": "Fix type signal. Also force new on type changes",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C135"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-key-pair",
+   "hash": "80941f10a2483ef935c98f52273a38e132adfede",
+   "ts": 1648134065,
+   "author": "Friedrich Brunzema",
+   "subject": "Update to get rid of sensitive file warning from terraform (#69)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Co-authored-by: Friedrich Brunzema <Friedrich.Brunzema@sciex.com>\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C136"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-lambda",
+   "hash": "fa63c87a6aa16788efa1c1f72088d493504f1ae1",
+   "ts": 1774007878,
+   "author": "CloudDrove CI",
+   "subject": "chore: upgrade AWS provider to >= 5.80.0 and Terraform to >= 1.10.0 (#47)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/basic-function",
+    "examples/basic-s3-function",
+    "examples/complete-function"
+   ],
+   "body": "* \u2b06\ufe0f upgrade: update AWS provider to >= 5.80.0 and Terraform to >= 1.10.0\n\n* \ud83d\udd27 fix: add provider: none to tf-checks workflow\n\n* fix: correct required_version to >= 1.10.0\n\n---------\n\nCo-authored-by: Anmol Nagpal <anmolnagpal@users.noreply.github.com>",
+   "id": "C137"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-efs",
+   "hash": "57b7e8c63be18c0c8120cfc8754c547589f3d6a1",
+   "ts": 1579887721,
+   "author": "dhutty",
+   "subject": "KMS support (#39)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "* KMS support\n\n* explicit encryption only\n\nCo-Authored-By: Andriy Knysh <aknysh@users.noreply.github.com>\n\n* run `make readme`\n\nCo-authored-by: Andriy Knysh <aknysh@users.noreply.github.com>",
+   "id": "C138"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-cloudfront",
+   "hash": "1154605d868b14ba197bcba29677f7b26ffe32ab",
+   "ts": 1739770909,
+   "author": "DingGGu",
+   "subject": "Handling error remove_headers set empty array in response_headers_policy (#36)",
+   "flag": 1,
+   "modules": [
+    "modules/response-headers-policy"
+   ],
+   "body": "",
+   "id": "C139"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "5f61ffb3cb03a4d0ddb02dde1a3085aa428aeb38",
+   "ts": 1580838420,
+   "author": "Brice Delvallee",
+   "subject": "fix: Resolve \"Invalid expanding argument value\" issue with the newer versions of terraform (#153)",
+   "flag": 1,
+   "modules": [
+    "modules/vpc"
+   ],
+   "body": "",
+   "id": "C140"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-global-accelerator",
+   "hash": "b29171b0f2385b3cfc515c2e5d0815a24c62140b",
+   "ts": 1686837512,
+   "author": "Ashutosh Mahajan",
+   "subject": "added examples",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C141"
+  },
+  {
+   "repo": "hashicorp/terraform",
+   "hash": "b06fe04621d7aa252ae616b209071a82b5d25dde",
+   "ts": 1643915661,
+   "author": "Alisdair McDiarmid",
+   "subject": "core: Check rule error message expressions",
+   "flag": 1,
+   "modules": [
+    "internal/configs/testdata/invalid-files",
+    "internal/configs/testdata/valid-files"
+   ],
+   "body": "Error messages for preconditions, postconditions, and custom variable\nvalidations have until now been string literals. This commit changes\nthis to treat the field as an HCL expression, which must evaluate to a\nstring. Most commonly this will either be a string literal or a template\nexpression.\n\nWhen the check rule condition is evaluated, we also evaluate the error\nmessage. This means that the error message should always evaluate to a\nstring value, even if the condition passes. If it does not, this will\nresult in an error diagnostic.\n\nIf the condition fails, and the error message also fails to evaluate, we\nfall back to a default error message. This means that the check rule\nfailure will still be reported, alongside diagnostics explaining why the\ncustom error message failed to render.\n\nAs part of this change, we also necessarily remove the heuristic about\nthe error message format. This guidance can be readded in future as part\nof a configuration hint system.",
+   "id": "C142"
+  },
+  {
+   "repo": "derBroBro/TerraDepot",
+   "hash": "962e94322a4c73cc5bc4f04c25f537adf18d473b",
+   "ts": 1578345727,
+   "author": "Malte Brodersen",
+   "subject": "fix dependency for deployment",
+   "flag": 1,
+   "modules": [
+    "deploy"
+   ],
+   "body": "",
+   "id": "C143"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "1e05556e6fef211ce88f7833541aa0bfdf3659ca",
+   "ts": 1624872064,
+   "author": "luedigernet",
+   "subject": "feat: Add restore_to_point_in_time support for databases (#338)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/db_instance"
+   ],
+   "body": "",
+   "id": "C144"
+  },
+  {
+   "repo": "elastic/terraform-provider-elasticstack",
+   "hash": "96d099b5fbdb3702d468a2432984eec701b59b45",
+   "ts": 1777325106,
+   "author": "Toby Brain",
+   "subject": "fix(fleet_output): space-aware destroy check, plain-ID import step, and variables.tf extraction",
+   "flag": 1,
+   "modules": [
+    "internal/fleet/output/testdata/TestAccResourceFleetOutput_importFromSpace/create"
+   ],
+   "body": "- checkResourceOutputDestroy now reads space_ids.0 from state so non-default-space outputs are checked against the correct space rather than always defaulting to the default space\n- TestAccResourceFleetOutput_importFromSpace gains a Scenario 2 step: plain-ID import (no space prefix) verifies space_ids is not populated\n- Variable declarations extracted from output.tf into a separate variables.tf, matching the convention used by neighbouring testdata directories\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
+   "id": "C145"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "df90d8c2a99b982c65dac79f45f605b435848425",
+   "ts": 1729188702,
+   "author": "Kostya Linou",
+   "subject": "#minor: prepare for v2.7.0 minor release (#465)",
+   "flag": 0,
+   "modules": [
+    "examples/configurations/advanced-bidirectional-cluster-link-rbac",
+    "examples/configurations/azure-key-vault",
+    "examples/configurations/basic-kafka-acls",
+    "examples/configurations/basic-kafka-acls-with-alias",
+    "examples/configurations/cluster-link-over-aws-private-link-networks",
+    "examples/configurations/connectors/custom-datagen-source-connector",
+    "examples/configurations/connectors/dynamo-db-sink-connector",
+    "examples/configurations/connectors/elasticsearch-sink-connector",
+    "examples/configurations/connectors/managed-datagen-source-connector",
+    "examples/configurations/connectors/mongo-db-sink-connector",
+    "examples/configurations/connectors/mongo-db-source-connector",
+    "examples/configurations/connectors/postgre-sql-cdc-debezium-source-connector",
+    "examples/configurations/connectors/s3-sink-connector",
+    "examples/configurations/connectors/snowflake-sink-connector",
+    "examples/configurations/connectors/sql-server-cdc-debezium-source-connector",
+    "examples/configurations/create-default-topic-and-return-kafka-api-keys-to-consume-and-produce/confluent_kafka_topic_api_keys_module",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-acls",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-aws-kafka-acls",
+    "examples/configurations/dedicated-privatelink-aws-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-azure-kafka-acls",
+    "examples/configurations/dedicated-privatelink-azure-kafka-rbac",
+    "examples/configurations/dedicated-public-aws-byok-kafka-acls",
+    "examples/configurations/dedicated-public-azure-byok-kafka-acls",
+    "examples/configurations/dedicated-public-gcp-byok-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-rbac",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-acls",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-rbac",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-acls",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-v2-aws-kafka-acls",
+    "examples/configurations/destination-initiated-cluster-link-rbac",
+    "examples/configurations/enterprise-privatelinkattachment-aws-kafka-acls",
+    "examples/configurations/enterprise-privatelinkattachment-azure-kafka-acls",
+    "examples/configurations/flink-quickstart",
+    "examples/configurations/flink-quickstart-2",
+    "examples/configurations/flink_artifact",
+    "examples/configurations/hashicorp-vault",
+    "examples/configurations/kafka-ops-env-admin-product-team/env-admin-product-team",
+    "examples/configurations/kafka-ops-env-admin-product-team/kafka-ops-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-admin-product-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-ops-team",
+    "examples/configurations/ksql-acls",
+    "examples/configurations/ksql-rbac",
+    "examples/configurations/manage-topics-via-json/confluent_kafka_topics_module",
+    "examples/configurations/managing-single-kafka-cluster",
+    "examples/configurations/multiple-event-types-avro-schema",
+    "examples/configurations/multiple-event-types-proto-schema",
+    "examples/configurations/provider-integration-aws",
+    "examples/configurations/regular-bidirectional-cluster-link-rbac",
+    "examples/configurations/schema-linking",
+    "examples/configurations/single-event-types-avro-schema",
+    "examples/configurations/single-event-types-proto-schema",
+    "examples/configurations/single-event-types-proto-schema-with-alias",
+    "examples/configurations/source-initiated-cluster-link-rbac",
+    "examples/configurations/standard-kafka-acls",
+    "examples/configurations/standard-kafka-rbac",
+    "examples/configurations/stream-catalog",
+    "examples/configurations/topic-as-a-service/topic_as_a_service_module"
+   ],
+   "body": "",
+   "id": "C146"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-autoscaling",
+   "hash": "66239812b6afeafc9ecde97f0fef51d8f3fd0dda",
+   "ts": 1750874022,
+   "author": "Bryant Biggs",
+   "subject": "fix: Restrict AWS provider version from using `v6.x` which contains breaking changes (#293)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C147"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-vnet",
+   "hash": "975ed72836663dce08f6a5a976f1284e3d0d130d",
+   "ts": 1728478219,
+   "author": "J\u00e9r\u00f4me Respaut",
+   "subject": "refactor: apply suggestions",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C148"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "0d7d3d71e74302e751005c981424e91dbb8376cb",
+   "ts": 1686339873,
+   "author": "zhenli00",
+   "subject": "API-1008: add more acls (#504)",
+   "flag": 0,
+   "modules": [
+    "examples/configurations/connectors/sql-server-cdc-debezium-source-connector"
+   ],
+   "body": "* add more acl\n\n* Update main.tf",
+   "id": "C149"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-eks",
+   "hash": "7f84af6f5d5f0072a8a1dd6afadff4eb182147f7",
+   "ts": 1744603899,
+   "author": "Abhishek Srivastava",
+   "subject": "[PFMENG-3033] add exclude namespace for fluentbit logging (#164)",
+   "flag": 0,
+   "modules": [
+    "modules/essentials"
+   ],
+   "body": "* [PFMENG-3033] add exclude namespace for fluentbit logging\n\n* [PFMENG-3033] add exclude namespace for fluentbit logging\n\n* [PFMENG-3033] fix the identation\n\n* [PFMENG-3033] fix the identation\n\n* [PFMENG-3033] fix the identation\n\n* [PFMENG-3033] fix the identation\n\n* Exclude Template File for Yaml Check\n\n* Updated the Type and Description for the variable fluent_bit_excluded_namespaces\n\n---------\n\nCo-authored-by: Navfarm <navfarm.sph.com.sg>",
+   "id": "C150"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "b6e20c303b8b40613c44586aca9be7c37bac2d09",
+   "ts": 1665132167,
+   "author": "Thierry Lei",
+   "subject": "AZ-865: Fix Soft Delete for NFS 3.0 with Blob Storage",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C151"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "8ca3ab3d066be75629fae928bcbed1a6b65991f0",
+   "ts": 1787934015,
+   "author": "Kostya Linou",
+   "subject": "#minor Prepare for 2.85.0 (hot-fix) (#1197)",
+   "flag": 1,
+   "modules": [
+    "examples/configurations/advanced-bidirectional-cluster-link-rbac",
+    "examples/configurations/authentication-using-oauth/azure-entra-id",
+    "examples/configurations/authentication-using-oauth/okta",
+    "examples/configurations/authentication-using-oauth/schema-exporter",
+    "examples/configurations/azure-key-vault",
+    "examples/configurations/basic-kafka-acls",
+    "examples/configurations/basic-kafka-acls-with-alias",
+    "examples/configurations/cluster-link-over-aws-private-link-networks",
+    "examples/configurations/cluster-link-using-oauth/advanced-bidirectional-cluster-link-using-oauth",
+    "examples/configurations/cluster-link-using-oauth/destination-initiated-cluster-link-using-oauth",
+    "examples/configurations/cluster-link-using-oauth/regular-bidirectional-cluster-link-using-oauth",
+    "examples/configurations/connect-artifact",
+    "examples/configurations/connectors/custom-datagen-source-connector",
+    "examples/configurations/connectors/dynamo-db-sink-connector",
+    "examples/configurations/connectors/elasticsearch-sink-connector",
+    "examples/configurations/connectors/manage-offsets-github-source-connector",
+    "examples/configurations/connectors/manage-offsets-mongo-db-source-connector",
+    "examples/configurations/connectors/manage-offsets-mysql-sink-connector",
+    "examples/configurations/connectors/managed-datagen-source-connector",
+    "examples/configurations/connectors/mongo-db-sink-connector",
+    "examples/configurations/connectors/mongo-db-source-connector",
+    "examples/configurations/connectors/postgre-sql-cdc-debezium-source-connector",
+    "examples/configurations/connectors/s3-sink-connector",
+    "examples/configurations/connectors/s3-sink-connector-assume-role",
+    "examples/configurations/connectors/snowflake-sink-connector",
+    "examples/configurations/connectors/sql-server-cdc-debezium-source-connector",
+    "examples/configurations/create-default-topic-and-return-kafka-api-keys-to-consume-and-produce/confluent_kafka_topic_api_keys_module",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-acls",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-aws-kafka-acls",
+    "examples/configurations/dedicated-privatelink-aws-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-azure-kafka-acls",
+    "examples/configurations/dedicated-privatelink-azure-kafka-rbac",
+    "examples/configurations/dedicated-public-aws-byok-kafka-acls",
+    "examples/configurations/dedicated-public-azure-byok-kafka-acls",
+    "examples/configurations/dedicated-public-gcp-byok-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-rbac",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-acls",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-rbac",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-acls",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-v2-aws-kafka-acls",
+    "examples/configurations/destination-initiated-cluster-link-rbac",
+    "examples/configurations/dns-forwarder",
+    "examples/configurations/enterprise-ingress-azure",
+    "examples/configurations/enterprise-pni-aws-kafka-rbac",
+    "examples/configurations/enterprise-privatelinkattachment-aws-kafka-acls",
+    "examples/configurations/enterprise-privatelinkattachment-azure-kafka-acls",
+    "examples/configurations/field-level-encryption-schema",
+    "examples/configurations/flink-carry-over-offset-between-statements",
+    "examples/configurations/flink-quickstart",
+    "examples/configurations/flink-quickstart-2",
+    "examples/configurations/flink_artifact",
+    "examples/configurations/freight-aws-kafka-rbac",
+    "examples/configurations/hashicorp-vault",
+    "examples/configurations/kafka-ops-env-admin-product-team/env-admin-product-team",
+    "examples/configurations/kafka-ops-env-admin-product-team/kafka-ops-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-admin-product-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-ops-team",
+    "examples/configurations/ksql-acls",
+    "examples/configurations/ksql-rbac",
+    "examples/configurations/manage-topics-via-json/confluent_kafka_topics_module",
+    "examples/configurations/managing-single-kafka-cluster",
+    "examples/configurations/multiple-event-types-avro-schema",
+    "examples/configurations/multiple-event-types-proto-schema",
+    "examples/configurations/network-access-point-gcp-private-service-connect",
+    "examples/configurations/private-flink-quickstart",
+    "examples/configurations/private-link-schema-registry",
+    "examples/configurations/provider-integration-aws",
+    "examples/configurations/regular-bidirectional-cluster-link-rbac",
+    "examples/configurations/schema-linking",
+    "examples/configurations/single-event-types-avro-schema",
+    "examples/configurations/single-event-types-proto-schema",
+    "examples/configurations/single-event-types-proto-schema-with-alias",
+    "examples/configurations/source-initiated-cluster-link-rbac",
+    "examples/configurations/standard-kafka-acls",
+    "examples/configurations/standard-kafka-rbac",
+    "examples/configurations/stream-catalog",
+    "examples/configurations/tableflow/byob-aws-storage",
+    "examples/configurations/tableflow/confluent-managed-storage",
+    "examples/configurations/tableflow/datagen-connector-byob-aws-storage",
+    "examples/configurations/tableflow/datagen-connector-confluent-managed-storage",
+    "examples/configurations/topic-as-a-service/topic_as_a_service_module"
+   ],
+   "body": "",
+   "id": "C152"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-log-export",
+   "hash": "86d638817306fad77e4756c116ceea976cedb567",
+   "ts": 1641491178,
+   "author": "release-please[bot]",
+   "subject": "chore: release 7.3.0 (#109)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/bigquery",
+    "modules/pubsub",
+    "modules/storage"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",
+   "id": "C153"
+  },
+  {
+   "repo": "shuaibiyy/terraform-ecs-jenkins",
+   "hash": "194b949e49847252dd7bf7df70ca8e3fbcbc0660",
+   "ts": 1501765143,
+   "author": "Henrik Hussfelt",
+   "subject": "Fix deprecation: using template_file as a resource is deprecated",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C154"
+  },
+  {
+   "repo": "cloudandthings/terraform-aws-clickops-notifier",
+   "hash": "b0369c1929d02eb46f6a304f8e678b445c31218a",
+   "ts": 1775611708,
+   "author": "Hannah Lyons",
+   "subject": "fix: replace deprecated aws_region .name attribute with .id",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "The `name` attribute on the `aws_region` data source is deprecated\nin recent AWS provider versions. Use `id` instead, which returns\nthe same value.",
+   "id": "C155"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "2e268edd925bd20147a69e6d322dfa69c1e21b64",
+   "ts": 1770619441,
+   "author": "release-please[bot]",
+   "subject": "chore(main): release 15.2.0 (#674)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/fabric-net-firewall",
+    "modules/fabric-net-svpc-access",
+    "modules/firewall-rules",
+    "modules/hierarchical-firewall-policy",
+    "modules/network-connectivity-center",
+    "modules/network-firewall-policy",
+    "modules/network-peering",
+    "modules/private-service-connect",
+    "modules/private-service-connect-endpoints-for-published-services",
+    "modules/private-service-connect-producer",
+    "modules/routes",
+    "modules/routes-beta",
+    "modules/subnets",
+    "modules/subnets-beta",
+    "modules/vpc"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>",
+   "id": "C156"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "9f5fa25614c13c42abddc71d5ece091d9d56ed75",
+   "ts": 1535967544,
+   "author": "Joshua Kite",
+   "subject": "WIP broken",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C157"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-cognito",
+   "hash": "d17542c2841faa7d0926bf85bc452cc25cff31cd",
+   "ts": 1684364602,
+   "author": "lucastercas",
+   "subject": "Remove dynamic from `verification_message_template`",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C158"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-composer",
+   "hash": "47fa9e047de078fd43602f522b9039cfe0ba9db9",
+   "ts": 1713216930,
+   "author": "release-please[bot]",
+   "subject": "chore(master): release 5.1.0 (#130)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/airflow_connection",
+    "modules/airflow_pool",
+    "modules/airflow_storage",
+    "modules/composer_net",
+    "modules/create_environment_v1",
+    "modules/create_environment_v2",
+    "modules/master_authorized_networks"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>\nCo-authored-by: Imran Nayer <imrannayer@google.com>",
+   "id": "C159"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-opensearch",
+   "hash": "8e4951c75004fe00b21d5b1dda02639319c1bc44",
+   "ts": 1767777271,
+   "author": "abhinavkumarsph",
+   "subject": "adjust thresholds for jvm pressure cloudwatch alarms (#78)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C160"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-efs",
+   "hash": "234010ce016ced26b97bcc58c7394888ecaf0d3e",
+   "ts": 1645473177,
+   "author": "nitrocode",
+   "subject": "Fix secondary gids and lifecycle hooks (#109)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "* fix: put lifecycle policies in separate blocks\n\n* Fix secondary gids\n\n* Auto Format\n\n* Update LICENSE\n\n* Bump test modules, enabled logic for access points\n\n* Fix tests\n\n* terraform fmt\n\nCo-authored-by: kevouellet <43302866+kevouellet@users.noreply.github.com>\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C161"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-dms",
+   "hash": "d3001146c9795ea7cc80831b4a0a27fce1391e6f",
+   "ts": 1647545050,
+   "author": "Bryant Biggs",
+   "subject": "feat: Add support for additional `s3_settings` attributes on DMS endpoint for upstream https://github.com/hashicorp/terraform-provider-aws/pull/20913",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C162"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-account",
+   "hash": "9c8751444e0eefad6810ed088e1a8bbdd73b9fc6",
+   "ts": 1716270702,
+   "author": "Byungjin Park",
+   "subject": "Fix bug of urn output in iam-oidc-identity-provider module",
+   "flag": 1,
+   "modules": [
+    "modules/iam-oidc-identity-provider"
+   ],
+   "body": "",
+   "id": "C163"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-elasticache",
+   "hash": "9048b3cb0746834688da7a54eeb545d3534c6887",
+   "ts": 1769650222,
+   "author": "Melissa Greenbaum",
+   "subject": "feat: Default User ARN Output (#66)",
+   "flag": 0,
+   "modules": [
+    "modules/user-group"
+   ],
+   "body": "",
+   "id": "C164"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "1709b69a3ee551d297d116140d38f4157b669c94",
+   "ts": 1791411425,
+   "author": "Dani\u00ebl Illouz",
+   "subject": "feat: Add Lambda publish target support (#769)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C165"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-bastion",
+   "hash": "5b88ed72980342e30bdd80d3d4cda332d837c9df",
+   "ts": 1732093693,
+   "author": "J\u00e9r\u00f4me Respaut",
+   "subject": "fix: update examples",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/main"
+   ],
+   "body": "",
+   "id": "C166"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-iam",
+   "hash": "d4e0a38a4f4ff4744549adbe34fd247d073abbf5",
+   "ts": 1721950691,
+   "author": "renovate[bot]",
+   "subject": "chore(deps): Update Terraform terraform-google-modules/project-factory/google to v15 (#220)",
+   "flag": 0,
+   "modules": [
+    "test/setup"
+   ],
+   "body": "Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+   "id": "C167"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-ecs",
+   "hash": "f538ed85cc30bc937d2bae558ff38e3495727c6e",
+   "ts": 1786421421,
+   "author": "Byungjin Park (Claud)",
+   "subject": "chore(deps): align tedilabs child module version constraints with latest releases (#4)",
+   "flag": 0,
+   "modules": [
+    "modules/service"
+   ],
+   "body": "",
+   "id": "C168"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "b7d78f6246d76c0dd332d74b5e3858783754e88d",
+   "ts": 1755592383,
+   "author": "Marc-Antoine Bourlier",
+   "subject": "fix: update `large_file_share_enabled` condition for storage account",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "https://github.com/claranet/terraform-azurerm-storage-account/issues/22",
+   "id": "C169"
+  },
+  {
+   "repo": "signalsciences/terraform-provider-sigsci",
+   "hash": "7db11c60be18a310218cb1febe6d52edddf213e6",
+   "ts": 1628632170,
+   "author": "John Hanrahan",
+   "subject": "Added fixes for 0.4.2.  * Added warnings for unknown condition types  * Added Rule max length for conditions and actions  * Fix out of band deletions by returning nil instead of err  * Correctly set IDs for multiple resources so terraform will update instead of re-create  * Minor formatting",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "Added fixes for 0.4.2.\n * Added warnings for unknown condition types\n * Added Rule max length for conditions and actions\n * Fix out of band deletions by returning nil instead of err\n * Correctly set IDs for multiple resources so terraform will update instead of re-create\n * Minor formatting",
+   "id": "C170"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-eks",
+   "hash": "d5cd502e69b48ac1f27984560975dbc24fd1a872",
+   "ts": 1650936048,
+   "author": "Franklin Ashok P",
+   "subject": "changed cluster_name value in node_group.tf (#6)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C171"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-key-pair",
+   "hash": "22b1fe019546085ba1d6ca51cd8e3fce8a4e3914",
+   "ts": 1581447075,
+   "author": "Chris Weyl",
+   "subject": "Add a `private_key` output (#40)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "Sometimes it's useful to have this available -- e.g. for CI situations\nin which one needs to create a scratch key, create an instance, then\nprovision the instance using the newly-created keypair.",
+   "id": "C172"
+  },
+  {
+   "repo": "btobolaski/terraform-provider-linode",
+   "hash": "65e081f8a0e9f6c6220f35919a6a5c4c1b9d59b1",
+   "ts": 1528860550,
+   "author": "Marques Johansson",
+   "subject": "fixes for private ip, configs, image ids, api error handling",
+   "flag": 1,
+   "modules": [
+    "examples"
+   ],
+   "body": "",
+   "id": "C173"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-storage-account",
+   "hash": "bb74e69d3a25b860d3560c95a35d469508825922",
+   "ts": 1675768964,
+   "author": "J\u00e9r\u00e9my MARMOL",
+   "subject": "AZ-995: Fix largefile activation if not LRS or ZRS",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C174"
+  },
+  {
+   "repo": "chanzuckerberg/fogg",
+   "hash": "3a7445bc4f60494b013e1e2ac9dcde497fcdf854",
+   "ts": 1674067887,
+   "author": "Alex Lokshin",
+   "subject": "fix: Update dependencies and fix unit tests (#776)",
+   "flag": 1,
+   "modules": [
+    "testdata/tfe_config/terraform/tfe",
+    "testdata/v2_no_aws_provider_yaml/terraform/envs/staging/vpc"
+   ],
+   "body": "* fix: Update dependencies and fix unit tests\n\n* Updated dependencies\n\n* Update apply.go\n\n* Update apply_test.go\n\n* Made test versions consistent\n\n* Update outputs.tf\n\n* Update outputs.tf",
+   "id": "C175"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-alb",
+   "hash": "864b57c1a2909e23e94560b6ffc548639736bb3b",
+   "ts": 1668803412,
+   "author": "tbpoetke",
+   "subject": "add preserve host header option (#124)",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "* add preserve host header option\n\n* remove test files\n\n* Auto Format\n\n* Update variables.tf\n\nCo-authored-by: nitrocode <7775707+nitrocode@users.noreply.github.com>\n\nCo-authored-by: Tommy <thomas.poetke@exconcept.com>\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>\nCo-authored-by: nitrocode <7775707+nitrocode@users.noreply.github.com>",
+   "id": "C176"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-rds",
+   "hash": "f3c6b43a6da61cb71310e750f2768ef79af53583",
+   "ts": 1699897762,
+   "author": "renovate[bot]",
+   "subject": "chore(deps): update terraform cloudposse/vpc/aws to v2.1.1 (#162)",
+   "flag": 0,
+   "modules": [
+    "examples/complete",
+    "examples/mssql"
+   ],
+   "body": "Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+   "id": "C177"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-elasticache",
+   "hash": "f91028dc62cae00249ecc2709f06cb1be3a961de",
+   "ts": 1713917264,
+   "author": "Melissa Greenbaum",
+   "subject": "feat: Support elasticache serverless cache (#3)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/memcached-cluster",
+    "examples/redis-cluster",
+    "examples/redis-cluster-mode",
+    "examples/redis-global-replication-group",
+    "examples/redis-replication-group",
+    "examples/serverless-cache",
+    "modules/serverless-cache",
+    "modules/user-group"
+   ],
+   "body": "",
+   "id": "C178"
+  },
+  {
+   "repo": "neiman-marcus/terraform-aws-jenkins-ha-agents",
+   "hash": "4ec4b9c4112bf26d2b80cd3a9e743931b2a95ba7",
+   "ts": 1595262520,
+   "author": "Clay Danford",
+   "subject": "Update to jenkins 2.235.2.",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/full"
+   ],
+   "body": "",
+   "id": "C179"
+  },
+  {
+   "repo": "SPHTech-Platform/terraform-aws-eks",
+   "hash": "0114a9750da40e5967ad25cb2c5e8fd9edf3d61b",
+   "ts": 1783923401,
+   "author": "Niro",
+   "subject": "feat: add vpc_cni_env passthrough for VPC CNI addon configuration (#206)",
+   "flag": 0,
+   "modules": [
+    "",
+    "modules/karpenter"
+   ],
+   "body": "* feat: add vpc_cni_env passthrough for VPC CNI addon configuration\n\nAllows callers to set aws-node env vars (e.g. WARM_IP_TARGET,\nMINIMUM_IP_TARGET) without overriding the whole vpc-cni addon entry,\nwhich would drop the module-internal IRSA/pod-identity wiring.\n\n* fix: omit configuration_values key entirely when vpc_cni_env unset\n\nReview feedback: key-present-with-null is not identical to key-absent\nfor downstream map merges. Also document that vpc_cni_env values land\nin plan/state and must not carry secrets.\n\n* feat: configure vpc-cni addon before compute\n\nApplies CNI settings before EC2 nodes launch so first nodes bootstrap\nwith the intended IPAM configuration (prefix delegation max-pods,\ncustom networking). Existing consumers see a one-time addon resource\nreplacement; preserve=true keeps aws-node running through it, or use\nterraform state mv to avoid the replacement entirely.\n\n* chore: upgrade default Kubernetes version to 1.36 and update validation constraints\n\n* fix: restrict Zonal Shift permissions by adding a resource-level condition in Karpenter IRSA policy\n\n* docs: update README.md for karpenter 1.14.0\n\n---------\n\nCo-authored-by: Uchinda Padmaperuma <uchinda@sph.com.sg>",
+   "id": "C180"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-rds",
+   "hash": "8b8f9b7bc9f0a88e645307260a65d9ec27369c6a",
+   "ts": 1615381881,
+   "author": "Bryant Biggs",
+   "subject": "fix: default to AWS provided option and parameter groups when not creating nor providing (#308)",
+   "flag": 1,
+   "modules": [
+    "",
+    "examples/complete-mysql",
+    "examples/complete-postgres",
+    "examples/groups",
+    "modules/db_option_group"
+   ],
+   "body": "",
+   "id": "C181"
+  },
+  {
+   "repo": "clouddrove/terraform-aws-global-accelerator",
+   "hash": "63461de010be209acdf544a130399e28723d5132",
+   "ts": 1689687114,
+   "author": "mamraj yadav",
+   "subject": "bug: updated changelog.md",
+   "flag": 1,
+   "modules": [
+    "_example"
+   ],
+   "body": "",
+   "id": "C182"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-rds",
+   "hash": "893eef82cf5ecc848acbb156d4441e4b98359580",
+   "ts": 1776196120,
+   "author": "RoseSecurity",
+   "subject": "feat(rds_instance): support blue green deployments (#206)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C183"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-route53",
+   "hash": "47262df81f7dd07a8dc4b99f97b8f69178088f7f",
+   "ts": 1630073091,
+   "author": "Anton Babenko",
+   "subject": "fix: Fixed records with different length (#54)",
+   "flag": 1,
+   "modules": [
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C184"
+  },
+  {
+   "repo": "neiman-marcus/terraform-aws-jenkins-ha-agents",
+   "hash": "2ee599426b27c93a671f33415b0d83d1a599a163",
+   "ts": 1655139025,
+   "author": "vs002666",
+   "subject": "added cli v2 installation and changed templatefile syntax",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C185"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "0b17a4102f5f21e7a6de72a3b9ed7760c4ca7c9a",
+   "ts": 1638806197,
+   "author": "chroju",
+   "subject": "fix: atlantis health check path (#242)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C186"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "b6b3fcced034988dfbdd6fea81cedd366380d611",
+   "ts": 1589225898,
+   "author": "Michael Warkentin",
+   "subject": "fix: Update deprecated ALB listener rule format (#89)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C187"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-iam",
+   "hash": "07c4031bd140be7087084eca9d2b6c246e3faa86",
+   "ts": 1695077286,
+   "author": "release-please[bot]",
+   "subject": "chore(master): release 7.7.0 (#191)",
+   "flag": 0,
+   "modules": [
+    "modules/artifact_registry_iam",
+    "modules/audit_config",
+    "modules/bigquery_datasets_iam",
+    "modules/billing_accounts_iam",
+    "modules/cloud_run_services_iam",
+    "modules/custom_role_iam",
+    "modules/dns_zones_iam",
+    "modules/folders_iam",
+    "modules/kms_crypto_keys_iam",
+    "modules/kms_key_rings_iam",
+    "modules/member_iam",
+    "modules/organizations_iam",
+    "modules/projects_iam",
+    "modules/pubsub_subscriptions_iam",
+    "modules/pubsub_topics_iam",
+    "modules/service_accounts_iam",
+    "modules/storage_buckets_iam",
+    "modules/subnets_iam",
+    "modules/tag_keys_iam",
+    "modules/tag_values_iam"
+   ],
+   "body": "Co-authored-by: release-please[bot] <55107282+release-please[bot]@users.noreply.github.com>\nCo-authored-by: Awais Malik <malik.awais@gmail.com>",
+   "id": "C188"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-atlantis",
+   "hash": "42aaff07428e8ce41c03f9f90bb5ec9a7a948e52",
+   "ts": 1533903681,
+   "author": "Jamie Nelson",
+   "subject": "Added a task role to the container",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C189"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-network",
+   "hash": "d0903ad9b71b74278945500eaa69d6f14d0d7474",
+   "ts": 1575629598,
+   "author": "Serhii Kozlovskyi",
+   "subject": "Add tests for allowed internal rules",
+   "flag": 0,
+   "modules": [
+    "examples/submodule_firewall"
+   ],
+   "body": "",
+   "id": "C190"
+  },
+  {
+   "repo": "confluentinc/terraform-provider-confluent",
+   "hash": "d596e585947d7cf6cf77188544f2fa53cd348c26",
+   "ts": 1761333208,
+   "author": "Daniel Ayaz",
+   "subject": "#minor Prepare for 2.51.0 release (#879)",
+   "flag": 0,
+   "modules": [
+    "examples/configurations/advanced-bidirectional-cluster-link-rbac",
+    "examples/configurations/authentication-using-oauth/azure-entra-id",
+    "examples/configurations/authentication-using-oauth/okta",
+    "examples/configurations/authentication-using-oauth/schema-exporter",
+    "examples/configurations/azure-key-vault",
+    "examples/configurations/basic-kafka-acls",
+    "examples/configurations/basic-kafka-acls-with-alias",
+    "examples/configurations/cluster-link-over-aws-private-link-networks",
+    "examples/configurations/cluster-link-using-oauth/advanced-bidirectional-cluster-link-using-oauth",
+    "examples/configurations/cluster-link-using-oauth/destination-initiated-cluster-link-using-oauth",
+    "examples/configurations/cluster-link-using-oauth/regular-bidirectional-cluster-link-using-oauth",
+    "examples/configurations/connect-artifact",
+    "examples/configurations/connectors/custom-datagen-source-connector",
+    "examples/configurations/connectors/dynamo-db-sink-connector",
+    "examples/configurations/connectors/elasticsearch-sink-connector",
+    "examples/configurations/connectors/manage-offsets-github-source-connector",
+    "examples/configurations/connectors/manage-offsets-mongo-db-source-connector",
+    "examples/configurations/connectors/manage-offsets-mysql-sink-connector",
+    "examples/configurations/connectors/managed-datagen-source-connector",
+    "examples/configurations/connectors/mongo-db-sink-connector",
+    "examples/configurations/connectors/mongo-db-source-connector",
+    "examples/configurations/connectors/postgre-sql-cdc-debezium-source-connector",
+    "examples/configurations/connectors/s3-sink-connector",
+    "examples/configurations/connectors/s3-sink-connector-assume-role",
+    "examples/configurations/connectors/snowflake-sink-connector",
+    "examples/configurations/connectors/sql-server-cdc-debezium-source-connector",
+    "examples/configurations/create-default-topic-and-return-kafka-api-keys-to-consume-and-produce/confluent_kafka_topic_api_keys_module",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-acls",
+    "examples/configurations/dedicated-private-service-connect-gcp-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-aws-kafka-acls",
+    "examples/configurations/dedicated-privatelink-aws-kafka-rbac",
+    "examples/configurations/dedicated-privatelink-azure-kafka-acls",
+    "examples/configurations/dedicated-privatelink-azure-kafka-rbac",
+    "examples/configurations/dedicated-public-aws-byok-kafka-acls",
+    "examples/configurations/dedicated-public-azure-byok-kafka-acls",
+    "examples/configurations/dedicated-public-gcp-byok-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-acls",
+    "examples/configurations/dedicated-public-kafka-rbac",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-acls",
+    "examples/configurations/dedicated-transit-gateway-attachment-aws-kafka-rbac",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-acls",
+    "examples/configurations/dedicated-vnet-peering-azure-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-aws-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-acls",
+    "examples/configurations/dedicated-vpc-peering-gcp-kafka-rbac",
+    "examples/configurations/dedicated-vpc-peering-v2-aws-kafka-acls",
+    "examples/configurations/destination-initiated-cluster-link-rbac",
+    "examples/configurations/dns-forwarder",
+    "examples/configurations/enterprise-pni-aws-kafka-rbac",
+    "examples/configurations/enterprise-privatelinkattachment-aws-kafka-acls",
+    "examples/configurations/enterprise-privatelinkattachment-azure-kafka-acls",
+    "examples/configurations/field-level-encryption-schema",
+    "examples/configurations/flink-carry-over-offset-between-statements",
+    "examples/configurations/flink-quickstart",
+    "examples/configurations/flink-quickstart-2",
+    "examples/configurations/flink_artifact",
+    "examples/configurations/freight-aws-kafka-rbac",
+    "examples/configurations/hashicorp-vault",
+    "examples/configurations/kafka-ops-env-admin-product-team/env-admin-product-team",
+    "examples/configurations/kafka-ops-env-admin-product-team/kafka-ops-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-admin-product-team",
+    "examples/configurations/kafka-ops-kafka-admin-product-team/kafka-ops-team",
+    "examples/configurations/ksql-acls",
+    "examples/configurations/ksql-rbac",
+    "examples/configurations/manage-topics-via-json/confluent_kafka_topics_module",
+    "examples/configurations/managing-single-kafka-cluster",
+    "examples/configurations/multiple-event-types-avro-schema",
+    "examples/configurations/multiple-event-types-proto-schema",
+    "examples/configurations/network-access-point-gcp-private-service-connect",
+    "examples/configurations/private-flink-quickstart",
+    "examples/configurations/private-link-schema-registry",
+    "examples/configurations/provider-integration-aws",
+    "examples/configurations/regular-bidirectional-cluster-link-rbac",
+    "examples/configurations/schema-linking",
+    "examples/configurations/single-event-types-avro-schema",
+    "examples/configurations/single-event-types-proto-schema",
+    "examples/configurations/single-event-types-proto-schema-with-alias",
+    "examples/configurations/source-initiated-cluster-link-rbac",
+    "examples/configurations/standard-kafka-acls",
+    "examples/configurations/standard-kafka-rbac",
+    "examples/configurations/stream-catalog",
+    "examples/configurations/tableflow/byob-aws-storage",
+    "examples/configurations/tableflow/confluent-managed-storage",
+    "examples/configurations/tableflow/datagen-connector-byob-aws-storage",
+    "examples/configurations/tableflow/datagen-connector-confluent-managed-storage",
+    "examples/configurations/topic-as-a-service/topic_as_a_service_module"
+   ],
+   "body": "* Reapply \"Revert provider integration v2 (#856)\" (#865)\n\nThis reverts commit 5b6b24afb890d7eb93b83aa49313604144bf90aa.\n\n* Revert \"APIE-415: Support in-place update for the recreate_on_update attribute of the confluent_schema resource (#863)\"\n\nThis reverts commit 708134dce78006887dd3715a487e3f0c6dd8cd9c.\n\n* #minor Prepare for 2.51.0 release",
+   "id": "C191"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "5e704a9a40071f22fb527cc874dd73e691981bfa",
+   "ts": 1536439611,
+   "author": "Joshua Kite",
+   "subject": "clean up code and update documentation",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C192"
+  },
+  {
+   "repo": "DNXLabs/terraform-aws-transit-gateway",
+   "hash": "2f5c939a0ea9f1108bd06aaca019a36dd234d66b",
+   "ts": 1760658694,
+   "author": "Alexandre Mont'Alvao",
+   "subject": "Set auto_accept_shared_attachments default to enable to prevent drift in existing resources",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C193"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-route53",
+   "hash": "be85f8ab1465ebc96bd70f7397881e901753d5bc",
+   "ts": 1606498011,
+   "author": "Leslie-Alexandre DENIS",
+   "subject": "fix: use tomap() instead of type declaration object() (#14)",
+   "flag": 1,
+   "modules": [
+    "examples/complete"
+   ],
+   "body": "",
+   "id": "C194"
+  },
+  {
+   "repo": "cloudposse/terraform-aws-dynamodb",
+   "hash": "7f1a7b04268a507cd82abfa0110fc8c39394f077",
+   "ts": 1666654145,
+   "author": "Dan Miller",
+   "subject": "Fix Perma-Drift with Replicas (#107)",
+   "flag": 1,
+   "modules": [
+    ""
+   ],
+   "body": "* explicitly set replica attrs\n\n* make github/init, updated set-outputs\n\n* Auto Format\n\n* test github_output from workflow\n\n* Auto Format\n\nCo-authored-by: cloudpossebot <11232728+cloudpossebot@users.noreply.github.com>",
+   "id": "C195"
+  },
+  {
+   "repo": "claranet/terraform-azurerm-bastion",
+   "hash": "014583e8910e234523009d43b918032acc9efacd",
+   "ts": 1658907722,
+   "author": "J\u00e9r\u00e9my MARMOL",
+   "subject": "AZ-804 Add new options",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C196"
+  },
+  {
+   "repo": "terraform-google-modules/terraform-google-log-export",
+   "hash": "3f7e6bba2bb63590df68d55245d16b7fd0970c69",
+   "ts": 1673316220,
+   "author": "Andrew Peabody",
+   "subject": "fix: relax random provider version requirement (#139)",
+   "flag": 1,
+   "modules": [
+    "modules/bq-log-alerting"
+   ],
+   "body": "",
+   "id": "C197"
+  },
+  {
+   "repo": "joshuamkite/terraform-aws-ssh-bastion-service",
+   "hash": "7cadad66dd276e125f4f6cc304a8f3333b92dac5",
+   "ts": 1536270293,
+   "author": "Joshua Kite",
+   "subject": "add logic test for custom ssh_populatem script",
+   "flag": 0,
+   "modules": [
+    ""
+   ],
+   "body": "",
+   "id": "C198"
+  },
+  {
+   "repo": "tedilabs/terraform-aws-account",
+   "hash": "f2c2cc6381023c57f0b81d30fe13ec497a93a4c6",
+   "ts": 1791439755,
+   "author": "Byungjin Park (Claud)",
+   "subject": "fix(iam-service-linked-role): include custom suffix in metadata name (#142)",
+   "flag": 1,
+   "modules": [
+    "modules/iam-service-linked-role"
+   ],
+   "body": "",
+   "id": "C199"
+  },
+  {
+   "repo": "terraform-aws-modules/terraform-aws-lambda",
+   "hash": "66eb330d4352a2bd95feded7f17f4c5046175aa5",
+   "ts": 1676029177,
+   "author": "Moritz Zimmer",
+   "subject": "feat: Allow multiple filters in event source mappings (#379)",
+   "flag": 0,
+   "modules": [
+    "",
+    "examples/event-source-mapping"
+   ],
+   "body": "Co-authored-by: Anton Babenko <anton@antonbabenko.com>",
+   "id": "C200"
+  }
+ ],
+ "pool_flagged": 1186,
+ "pool_unflagged": 5089,
+ "repos": 110,
+ "seed": 20261018
+}

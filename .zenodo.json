@@ -1,0 +1,12 @@
+{
+  "title": "IaCX: static structural measures for Terraform modules",
+  "upload_type": "software",
+  "description": "Measurement tool, regression fixtures, data and analysis scripts for the article 'IaCX: A Static Structural Measurement Suite for Terraform Configurations'.",
+  "creators": [
+    {"name": "Kulathunga, Anupa", "affiliation": "NupaStack LLC"},
+    {"name": "De Silva, Dilshan", "affiliation": "Sri Lanka Institute of Information Technology"}
+  ],
+  "license": "MIT",
+  "keywords": ["infrastructure as code", "Terraform", "software metrics", "dependency graph"],
+  "version": "1.0.0"
+}

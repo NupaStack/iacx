@@ -1,0 +1,6 @@
+repo,module,dup_repo,dup_module
+terraform-google-modules/terraform-google-lb-http,(root),GoogleCloudPlatform/terraform-google-lb-http,(root)
+terraform-google-modules/terraform-google-lb-http,modules/frontend,GoogleCloudPlatform/terraform-google-lb-http,modules/frontend
+terraform-google-modules/terraform-google-lb-http,modules/backend,GoogleCloudPlatform/terraform-google-lb-http,modules/backend
+terraform-google-modules/terraform-google-lb-http,modules/serverless_negs,GoogleCloudPlatform/terraform-google-lb-http,modules/serverless_negs
+terraform-google-modules/terraform-google-lb-http,modules/dynamic_backends,GoogleCloudPlatform/terraform-google-lb-http,modules/dynamic_backends

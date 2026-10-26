@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.pytest_cache/
+mining/clones/
+mining/audit_clones/
+push_release.sh

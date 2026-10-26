@@ -1,0 +1,201 @@
+id,repo,commit,subject,keyword_flag,reusable_module,rater_A,rater_B
+C001,chanzuckerberg/fogg,92ee41f0f1626c70d7c873828c6d27ec41467f42,[fix] Fix generation of remote backends (#447),1,0,Yes,Yes
+C002,cloudposse/terraform-aws-dynamodb,28314abd0bdfbe3b2f4ca616e88140848380d4e2,[Fix] Validation error when stream is disabled and stream view type is not empty string (#26),1,1,Yes,Yes
+C003,terraform-google-modules/terraform-google-address,a6d91de9ab21851f002c95a4fad5cfca70d257bc,fix: Remove need for deprecated template terraform provider (#38),1,1,Yes,Yes
+C004,clouddrove/terraform-aws-lambda,59262f73668080560165a1086cc072d206060421,fix: update workflow latest version and change _example name,1,0,No,No
+C005,cloudposse/terraform-aws-codebuild,c659c17ac386bc4c0da8c6c112d7b5595b37af1e,Add default values to ENV vars and check if they are not empty (#10),0,1,Yes,Yes
+C006,clouddrove/terraform-aws-iam,e4184f856edce73d86beadcec291ea4ce8c6438c,fix: automatically determine the number of role policy arns (#119),1,1,Yes,Yes
+C007,terraform-google-modules/terraform-google-vm,40502fd7623b069331b0f55aa72d512f2dcf063e,Fix: For error_message of variable - maintenance_interval (#411),1,1,No,No
+C008,confluentinc/terraform-provider-confluent,3834d5a5acad771dc6ed15ae6e626f482647c2a7,Update peering examples: Fix plan-dependency on vpc peering. (#199),1,0,Yes,Yes
+C009,chanzuckerberg/fogg,2c658460617f6714ddf6d06ddd67945bcc26ec8c,[refactor] aws provider into common template (#466),0,0,No,No
+C010,claranet/terraform-azurerm-storage-account,4602516cdf6d8c331bf2fcd7438da464733ad340,"feat(SREAA-368): upgrade module to v9 (OpenTofu >= 1.12, AzureRM ~> 5.0)",0,1,No,No
+C011,terraform-google-modules/terraform-google-composer,3a1202878cdbb0c0ed7c1ea6d122cc8b51e8bc5c,fix: (composer_net) warning because of null ip range in fw rules (#148),1,1,Yes,Yes
+C012,terraform-aws-modules/terraform-aws-datadog-forwarders,fcb8a0beec2b6cd814c08caef42655c1a61b5922,feat: add new release v3.32.0 and set as the default version - [ref](https://github.com/DataDog/datadog-serverless-functions/releases/tag/aws-dd-forwarder-3.32.0),0,1,No,No
+C013,azavea/terraform-aws-postgresql-rds,3cda0b0e9fb66c3dc6e908e92c83499a3b8aa843,Add alarm for cpu credits when running on a burstable instance type,0,1,No,No
+C014,terraform-aws-modules/terraform-aws-rds,079605ad6b55d201393bb8225f142129e2fc2195,fix: Update CI workflow versions to remove deprecated runtime warnings (#542),1,1,No,No
+C015,terraform-google-modules/terraform-google-network,a45294813e55e8422196ab078178c7507d3b3862,Fix references to counted network resource,1,1,Yes,Yes
+C016,terraform-aws-modules/terraform-aws-datadog-forwarders,da9bfa0d53e777db3a64affe39943af54163d542,fix: upgrade s3 module to latest to support Terraform 0.15.x syntax (#6),1,1,Yes,Yes
+C017,terraform-aws-modules/terraform-aws-datadog-forwarders,e772becdc0d69ad19fb858b01796598dc71adfee,feat: add new release v3.38.0 and set as the default version - [ref](https://github.com/DataDog/datadog-serverless-functions/releases/tag/aws-dd-forwarder-3.38.0),0,1,No,No
+C018,elastic/terraform-provider-elasticstack,ffa37d3711058bbfdba057d1c4e0b0fceca4a9d1,Bump versions for 0.6.0,0,0,No,No
+C019,btobolaski/terraform-provider-linode,f17358424e156df7527741d43e49cf8e884a8eae,"Revert ""remove incomplete (untested) data resources for now""",1,0,No,No
+C020,aws-ia/terraform-aws-vpc,8883d3ec8176ce80023469ea9fc46e03f9080afb,include outputs for nat gateways,0,1,No,No
+C021,neiman-marcus/terraform-aws-jenkins-ha-agents,5cd2a39b8616a3cbd96918666d6b88188b9fbcd3,Fixed bug in aws_subnets remediation,1,1,Yes,Yes
+C022,terraform-google-modules/terraform-google-iam,2529fe6173f7540994a346066d5ab141144861e9,[test] Refactor tests to be declarative. [changelog] add changes. [readme] fix typos. [migration] Add migration guide from 3.0 to 4.0,1,1,No,No
+C023,terraform-aws-modules/terraform-aws-atlantis,1cd8db8414bd45b3bb4389345bf1f2a6e7482b2f,docs: Update examples to show inputs required for Atlantis vs the webhook (#396),0,0,No,No
+C024,cloudposse/terraform-aws-codebuild,8d692b30c7e626d682630822851aa68e65646218,Add codecommit:GitPull policy so that CodeBuild can be used against CodeCommit (#47),0,1,Yes,Yes
+C025,Azure/terraform-azurerm-loadbalancer,fa569e9e397c5daa04884c813c29e5a41af7605f,deprecate outdated syntax (#56),0,1,No,No
+C026,jamesWoolfenden/pike,4c0302550fa3418b77c0e7e696af5d03ddb9bcee,moer aws resources,0,1,No,No
+C027,aws-ia/terraform-aws-vpc,c1e9a3dd48157ece8c8e2f76913a8bc2a51ad3b6,Fixed transit_gateway_id variable description,1,1,No,No
+C028,terraform-aws-modules/terraform-aws-vpc,67c1e9fc9947b0ebaca413dc49fc0d1e1578f354,Fixed #177 - public_subnets should not always be validated,1,1,Yes,Yes
+C029,terraform-aws-modules/terraform-aws-atlantis,c00014309078eb2ec89ee77b9d30579c0feb5bac,chore: Fixed typo in Ephemeral (#238),1,1,No,No
+C030,joshuamkite/terraform-aws-ssh-bastion-service,8c043c77f4f46c1d0cfd98055b71ce64901a13cb,wording,0,1,No,No
+C031,terraform-aws-modules/terraform-aws-rds,1245fac0c34e09e3145fa0f1a6084c9465097273,fix: update subnet group to fix name vs name_prefix (#312),1,1,Yes,Yes
+C032,confluentinc/terraform-provider-confluent,b07182a0d8ffd9bb8a97b421c73ee9c1cac97551,Fix typos  (#477),1,0,Yes,Yes
+C033,aws-ia/terraform-aws-vpc,07304e1d68ea193e655ddaae711f657044ace067,"include tgw rt assocation, re-organize rsc",0,1,No,Yes
+C034,terraform-linters/tflint,6d3096221c8d950e89a36473f1936a37fac8b54a,Add missing E2E test cases (#1313),1,0,No,No
+C035,tedilabs/terraform-aws-account,9c3a1070c8b847f38cd2134dfbaf0c6ace05831d,Add iam-saml-identity-provider module (#48),0,1,No,No
+C036,claranet/terraform-azurerm-vnet,d87265ad8625efe29222d78b476efd21296f94b8,fix(SREAA-368): align v9 branch with current pipeline and provider constraints,1,1,Yes,No
+C037,segmentio/stack,9d3c5b1bfcba546b78955c8203d54f14b448b513,mistyping,0,1,No,No
+C038,GoogleCloudPlatform/terraform-google-secret-manager,d5f21c806a94bf8b8c2f7862420af0e336856cd3,feat: Add per module requirements to secret-manager (#141),0,0,No,No
+C039,nozaq/terraform-aws-secure-baseline,7cf8fc1b6aacbc7167732cc3c47d33c4e5240563,fix: deprecation warnings (#140),1,1,No,No
+C040,terraform-aws-modules/terraform-aws-dms,8b674759d5b108123810d7b5cd910c7fae83dcbc,fix: add variable and additional poicy document to allow redshift to assume the `dms-access-for-endpoint` IAM role,1,1,Yes,Yes
+C041,aws-ia/terraform-aws-vpc,5520f47da701550e46c3f861eac1c731299b5a40,remove awscc resources,0,1,No,No
+C042,DNXLabs/terraform-aws-cognito,e7ad90d0b9b78acc10adeaec204ff4d8b9f99c0d,Fix type of `explicit_auth_flows`,1,1,Yes,Yes
+C043,terraform-google-modules/terraform-google-vm,0bc1906c9ed5e2f0534aeb64f96c8cc99ba92def,chore(main): release 15.1.0 (#578),0,1,No,No
+C044,clouddrove/terraform-aws-secrets-manager,86d588c1c0aa843cc6b25117d402a9d03e3e10f1,Naming foramt fixed,1,1,No,No
+C045,cloudposse/terraform-aws-inspector,3a411dd2d9e31f610424836bb6a38dbe3fa0b12b,Update Terraform cloudposse/iam-role/aws to v0.15.0 (#20),0,1,No,No
+C046,Azure/terraform-azurerm-compute,d53e0a57398580b9250b0b8c7a0eab8e58bb1eb1,Add space between variable name and starting { (#27),0,1,No,No
+C047,DNXLabs/terraform-aws-cognito,c001a769fe39ecf01c2e2f39e51b6d4cf4c6193e,Fix `admin_create_user_config`,1,1,Yes,Yes
+C048,terraform-docs/terraform-docs,bf0770694749439b95e2e22852d54404439fce14,fix: Do not escape markdown table inside module header (#186),1,0,No,No
+C049,SPHTech-Platform/terraform-aws-eks,b8d9d6e755d37d8087f5f1b7b3ed4cc22da80965,[PFMENG-5472] Fix: Default to inline IAM policy for Karpenter controller (#201),1,1,Yes,Yes
+C050,cloudposse/terraform-aws-dynamodb,e016fc347dea6bde43905a5a781e514bf3ae8ac5,Add support for `non_key_attributes`. Add examples (#18),0,1,No,No
+C051,claranet/terraform-azurerm-storage-account,615f488efe07635ad0eeaf0fb7b32d0708fbc116,AZ-964: Apply suggestion,0,1,No,No
+C052,DNXLabs/terraform-aws-eventbridge,03ef4ff5927259b53c4b10c9d90d39db78e80196,fix: Wrong value of api destination output (#79),1,1,Yes,Yes
+C053,jamesWoolfenden/pike,5dc2af922ce1002f49cde9280a60819d8fd7572c,redis and endpoint,0,1,No,No
+C054,cloudposse/terraform-aws-codebuild,42ea8ddd3770fad5d70d08fc0f1ba5c266dff46c,fix: Add condition to manage creation of cache bucket policy (#39),1,1,Yes,Yes
+C055,terraform-aws-modules/terraform-aws-lambda,7c674a3b74e0ff5df0878006c9370e9c307fd15d,fix: Fix policy attachments for managed policies (#45),1,1,Yes,Yes
+C056,aminueza/terraform-provider-minio,244298afc35346ce6d8635f47a8a55c5c1c43ca3,Fix an example value of `expiration` (#462),1,0,Yes,Yes
+C057,joshuamkite/terraform-aws-ssh-bastion-service,f75938d2a46d349b397e240a94d1867e7170758e,revert inapproriate merge,1,1,Yes,Yes
+C058,GoogleCloudPlatform/terraform-google-secret-manager,9eec076350e81678fe40e145ffbe4db2051e6bee,chore(deps): Update Terraform GoogleCloudPlatform/secret-manager/google to ~> 0.3 (#84),0,0,No,No
+C059,neiman-marcus/terraform-aws-jenkins-ha-agents,70390c182f583d86371e5dd84f9014d0eb754400,First release.,0,1,No,No
+C060,DNXLabs/terraform-aws-eventbridge,e601dec84f2878f5479eeadf9b05b624d7be96bf,fix: Fixed function name from to_map to tomap (#26),1,1,Yes,Yes
+C061,kumarvna/terraform-azurerm-application-gateway,dfff4ccfbe74762e4c5f4b1b38e9d2a387ddf4a6,updating http listeners configuraiton,0,1,No,No
+C062,terraform-google-modules/terraform-google-iam,fcfd23e9a7832e6e8a294096f90fcbf1e28f2f34,Fixes #4: Allow referencing computed value,1,1,Yes,Yes
+C063,segmentio/stack,eba4f21a77e195140355872c042180db8c6f3854,Add a module for RDS instances.,0,1,No,No
+C064,terraform-docs/terraform-docs,52653b5107c24bfafce9dcf29842e13a876acaab,fix: Render special chars in variables' default value properly (#284),1,0,No,No
+C065,terraform-aws-modules/terraform-aws-lambda,4fd3c097ca88ef885b4a6678a9f44ab462f26960,chore: Set number_of_policies in example,0,0,No,No
+C066,hashicorp/terraform,ebff0a468331dea1084497b297fb73dd2d2d0374,validate const is mutually exclusive with sensitive and ephemeral in variables,0,0,No,No
+C067,terraform-google-modules/terraform-google-log-export,511585e81b5c3960c09415f266c9cb828a9e663d,feat: add support for Log Analytics in log bucket destination (#179),0,1,No,No
+C068,terraform-aws-modules/terraform-aws-vpc,ec49d4334dec0448f2cec5e548f23d7d6e203a00,Add Elastic File System & Cloud Directory VPC Endpoints (#355),0,1,No,No
+C069,terraform-aws-modules/terraform-aws-lambda,72d887bb1694ffdef597daa8ec7896e0b85b6152,fix: Fixed issue with zip renaming on Windows platform (#32),1,1,Yes,Yes
+C070,claranet/terraform-azurerm-vnet,f660ec83507f79aa4adc39d36f07e95718978075,feat(AZ-1088)!: module v8 structure and updates,0,1,No,No
+C071,DNXLabs/terraform-aws-cognito,2977906200a0a237d981feb2fa3f304d442158ee,Fix use of legacy splat operator,1,1,No,No
+C072,terraform-aws-modules/terraform-aws-rds,c66cd738f86b9cd0742d9838635970ef7b5743e4,"feat!: Replace random password generation with manage master password, min AWS provider version increased to 5.0, `id` output replaced with `identifier` (#489)",0,1,No,No
+C073,clouddrove/terraform-aws-ecs,ab9028cd3aeeea1cafe429289cd67dd36f317465,Upgrade terraform version to 0.14 and update,0,1,No,No
+C074,terraform-google-modules/terraform-google-log-export,659babaaac364512c2efbf33441ae339cd623451,fix: upgraded versions.tf to include minor bumps from tpg v5 (#173),1,1,No,No
+C075,terraform-docs/terraform-docs,ab42f0d097d5246a446ad5ca450c2073c6a30bdc,Code blocks support for all formats. Single line break support (#123),1,0,No,No
+C076,nozaq/terraform-aws-secure-baseline,d0805ec5650eee9e24ae9eecb0cec6802b25b88d,feat: add flag to allow recording global resources in all regions (#168),0,1,No,No
+C077,clouddrove/terraform-aws-secrets-manager,8a05edfcbcceeb48b57df26d430e9a8a97a0c65d,update github action tag,0,1,No,No
+C078,terraform-google-modules/terraform-google-cloud-router,d420730e068110658deef8df99075e40c4ed6357,feat: make secondary_ip_range_names field optional (#8),0,1,No,No
+C079,cloudposse/terraform-aws-efs,317dfe367a74b5e3ac2707d93307f0577064faf2,Update context.tf from origin source (#72),0,1,No,No
+C080,jamesWoolfenden/pike,235382cfdbefbea0b780de89d3840919116507ca,wip,0,1,No,No
+C081,claranet/terraform-azurerm-storage-account,828c322ffa9022fcd8a8f799acd78b8ee44b77b9,AZ-130: Enable `large_file_share_enabled` by default,0,1,No,No
+C082,clouddrove/terraform-aws-sns,7417f16f6a5c46608ba99e0cfd8a071843795f90,feat: terraform fmt updated,0,1,No,No
+C083,clouddrove/terraform-aws-eventbridge,60f6246d4d938681183b3150c821c9cbacbd09b7,update github-action,0,1,No,No
+C084,terraform-aws-modules/terraform-aws-elasticache,cdc870e425fd34a93f3e38adccf8eb4c8fd1ef1a,fix: Change cloudwatch log group output to include all created log groups (#19),1,1,Yes,Yes
+C085,terraform-aws-modules/terraform-aws-elasticache,2a02a2cf0fa4d62cee9a56f5be727b1bab7808cd,fix: Fix cache_usage_limits issue when empty map (default value) is provided. (#13),1,1,Yes,Yes
+C086,gaia-app/gaia,40f650e38be37dbf2f7caa89020c96eb8004263c,:bug: : allow variable & output fields in any order,1,0,No,No
+C087,clouddrove/terraform-aws-iam,3c59715be4f5fc54810bd6565b1f74f6a98679f2,feat: Add role unique_id output in iam-assumable-role module (#143),0,1,No,No
+C088,SPHTech-Platform/terraform-aws-opensearch,d2f49ee23aef4604fef738d5e8d8b8b4bc955b1e,add support for multi-az with standby (#63),0,1,No,No
+C089,terraform-google-modules/terraform-google-vm,d11920cc40b30a3d3e46a037ce0e20dcf907da12,chore: fix metadata and lint (#442),1,1,No,No
+C090,devhelmhq/terraform-provider-devhelm,bb4e97d93ae32e78dab464550196400929d3bce6,fix(monitor): correct status_code assertion docs + orphan-cleanup safety net (#16),1,0,Yes,Yes
+C091,aws-ia/terraform-aws-vpc,801fa4a5fc5efedd21d576de750a93ebf21680c2,fix: reverted changes on for ipv6 support cwan example,1,0,Yes,Yes
+C092,nozaq/terraform-aws-secure-baseline,d9ccfc838f091c5e78dad84c8d0ffff07f39749a,fix: remove a default subnet resource,1,1,Yes,Yes
+C093,GoogleCloudPlatform/terraform-google-secret-manager,c87f5fa5accab89e9b5b276bc68ccccf338c8079,fix!: make secret_data required to create secret version in simple-secret module (#116),1,1,No,No
+C094,cloudposse/terraform-aws-dynamodb,3468579a01ab2eb46719b183c4831c4e8203c52b,Migrate readme yaml (#11),0,1,No,No
+C095,tedilabs/terraform-aws-account,05f0ce96047027936cb9bbf1de5cce56b62f007f,Improve federated features for iam-role module (#51),0,1,No,No
+C096,kumarvna/terraform-azurerm-container-registry,2075333b50bfc7e90d4e9c897ab982e9435875c9,updating georeplicaton configuration,0,1,No,No
+C097,GoogleCloudPlatform/terraform-google-secret-manager,4494e354495771294bb660f01360211ce4b3e73f,fix: google_secret_manager_secret_iam_binding.binding for_each (#72),1,1,Yes,Yes
+C098,SPHTech-Platform/terraform-aws-eks,46b8a9094790804132f288fe37f68d37f5c910ef,Fix for pure fargate cluster trying to create a cluster security group rule to non existing node security group source (#91),1,1,Yes,Yes
+C099,terraform-google-modules/terraform-google-vm,e3224131ed5cb57e60fe248d79939df35637bf02,feat!: add project_id as explicit input to compute_instance module (#554),0,1,No,No
+C100,SPHTech-Platform/terraform-aws-opensearch,891a32adee5cbee8f82d267a09e0b6fbf5cb7e6a,feat: support OR1 instance types for data nodes (#23),0,1,No,No
+C101,terraform-aws-modules/terraform-aws-atlantis,ccc18d5659401b83154bc0040a61faa3a2527281,feat: support custom platform version (#170),0,1,No,No
+C102,terraform-google-modules/terraform-google-network,2adc566aa37d564e9b87b3183cb8195b5fa11958,feat!: Add dynamic block to define secondary subnets (#523),0,1,No,No
+C103,terraform-aws-modules/terraform-aws-vpc,8634bcda8fd2e9696f5e7b319eb10677fa88ca31,fix: Resource aws_default_network_acl orphaned subnet_ids (#530),1,1,Yes,Yes
+C104,terraform-aws-modules/terraform-aws-autoscaling,d361057574eea73b6f4c2f1ce39ab9afad1e3f5f,ref #12 #1 - resolve tagging format difference (#19),1,1,No,No
+C105,terraform-google-modules/terraform-google-vm,3e2c8cdeb2d0e6f1fe53bc2d0a9369c9dc59f013,Fix: derive project id for instance from instance template (#63),1,1,Yes,Yes
+C106,terraform-aws-modules/terraform-aws-rds,f4052c758219898a1329497622303bde77f83741,Mark password as sensitive (closes #98),0,1,Yes,Yes
+C107,terraform-google-modules/terraform-google-log-export,430160515e1f83b12c0316f3e0ab1639260fa4cc,chore(master): release 9.0.0 (#225),0,1,No,No
+C108,aws-ia/terraform-aws-opensearch,9d44cec9a9d7d3c966a6f407529d3438c5b58cde,feat: adding tags to collection,0,1,No,No
+C109,cloudandthings/terraform-aws-clickops-notifier,ade5f2e582ffd51a51500308407e9d5b610ca7f7,feat: Allow user provided IAM role (#32),0,1,No,No
+C110,cloudposse/terraform-aws-rds,9a218ceeebfc063a0e4ba501d0251550710fadfe,fix 'Warning: Argument is deprecated' db_name (#140),1,1,Yes,Yes
+C111,terraform-google-modules/terraform-google-vm,61310dbdabeaf0672cef75e0c4a62f94edde2c95,add description in public outputs,0,1,No,No
+C112,devhelmhq/terraform-provider-devhelm,c5826a443d65403307772ba80719923b2feb4d55,fix(examples): correct assertion config + status-page branding examples (#4),1,0,Yes,Yes
+C113,clouddrove/terraform-aws-sns,01d66e0a34d134693f3c560fe983b0ddce9e63ad,Upgraded,0,1,No,No
+C114,jamesWoolfenden/pike,4ba42994e0285a341f30f31e9ccbf05aeb39f752,networks group fix,1,1,Yes,Yes
+C115,clouddrove/terraform-aws-eventbridge,f7d0782ee571604389a5e2ebf7f25dcf59ed7709,[pre-commit.ci] auto fixes from pre-commit.com hooks,1,1,No,No
+C116,joshuamkite/terraform-aws-ssh-bastion-service,28bc8420239078f40e5328f541bdac327321515d,correct output variable class,1,1,Yes,Yes
+C117,terraform-aws-modules/terraform-aws-vpc,d1adf743b27ef131b559ec15c7aadc37466a74b9,fix: Update tags for default resources to correct spurious plan diffs (#730),1,1,Yes,Yes
+C118,terraform-aws-modules/terraform-aws-route53,8bf1f5b07b1213e61768170d87dc5e7a03a87328,fix: correct documentation based on update by `terraform_docs` (#31),1,0,No,No
+C119,segmentio/stack,fd4913ee010e49291014f7aaf18c28a4ee9cc96f,mistyping patch,1,1,Yes,Yes
+C120,chanzuckerberg/fogg,ac310fe016123d14d86095a230ea595859d9883d,feat: allow for users to add aliased providers,0,0,No,No
+C121,elastic/terraform-provider-elasticstack,afb16c8df512fc7bc8f89076e53149c16b09a1ca,test: isolate entity-store acceptance tests per Kibana space (#4254),0,0,No,No
+C122,terraform-aws-modules/terraform-aws-lambda,166f71a0ad7373918164900e6a53fe26a9100d3c,fix: Computed values in number of policies,1,1,Yes,Yes
+C123,terraform-google-modules/terraform-google-network,da5372d51b36b5c7bc9c018353ab227104aa01b3,lint/validate fixes,1,0,Yes,Yes
+C124,clouddrove/terraform-aws-global-accelerator,ed5978841566c92f1e95d72a7908762bc4844646,[pre-commit.ci] auto fixes from pre-commit.com hooks,1,1,No,No
+C125,hashicorp/terraform,64cf53bd7e4e4b660c39fd4c27318b8716fd12cf,configs: Fix check block configuration diagnostics,1,0,No,No
+C126,terraform-aws-modules/terraform-aws-datadog-forwarders,b230c29fd2a1b0489b789cb180fad4930e6536fd,fix: need to add in cipher context to kms encryption op,1,1,Yes,Yes
+C127,GoogleCloudPlatform/terraform-google-secret-manager,6beaa663d4c4ed254fb9433664261846891f2dd5,fix: changed deprecated auto replication attribute (#31),1,1,Yes,Yes
+C128,nozaq/terraform-aws-secure-baseline,72a1c942d802fc0a995a76be5baf7c2dbfc23f85,Fix typo,1,1,Yes,Yes
+C129,terraform-aws-modules/terraform-aws-autoscaling,37824138e8d98fc8179177bc5c92880be2282d84,feat!: Allow multiple traffic source attachments (#273),0,1,No,No
+C130,tedilabs/terraform-aws-account,c213923256d5b8d83f71863eb7326caac966d16f,feat: improve how to use resource_group in modules (#123),0,1,No,No
+C131,terraform-google-modules/terraform-google-iam,8fb0abca61498ae4c3be2c7493c190117cf9a366,fix: Remove deprecated syntax (#124),1,1,Yes,Yes
+C132,DNXLabs/terraform-aws-opensearch,bb81ccb6444e41c850712f8837e883096deb5df8,fix hostname on route53,1,1,Yes,Yes
+C133,terraform-docs/terraform-docs,8f74fd445301187ee96d31c396cad42a11f921bb,"feat: ignore outputs, providers, resources with comments",0,0,No,No
+C134,aws-ia/terraform-aws-vpc,72bd492767a4c0d00f71658d78a111510a23dd41,awscc version 0.36.0 - no error in core network policy,1,1,Yes,Yes
+C135,signalsciences/terraform-provider-sigsci,0a6b4ab3445fc1c1790f0394d4b3bd5c381beea3,Fix type signal. Also force new on type changes,1,1,Yes,Yes
+C136,cloudposse/terraform-aws-key-pair,80941f10a2483ef935c98f52273a38e132adfede,Update to get rid of sensitive file warning from terraform (#69),0,1,No,Yes
+C137,clouddrove/terraform-aws-lambda,fa63c87a6aa16788efa1c1f72088d493504f1ae1,chore: upgrade AWS provider to >= 5.80.0 and Terraform to >= 1.10.0 (#47),0,1,No,No
+C138,cloudposse/terraform-aws-efs,57b7e8c63be18c0c8120cfc8754c547589f3d6a1,KMS support (#39),0,1,No,No
+C139,tedilabs/terraform-aws-cloudfront,1154605d868b14ba197bcba29677f7b26ffe32ab,Handling error remove_headers set empty array in response_headers_policy (#36),1,1,Yes,Yes
+C140,terraform-google-modules/terraform-google-network,5f61ffb3cb03a4d0ddb02dde1a3085aa428aeb38,"fix: Resolve ""Invalid expanding argument value"" issue with the newer versions of terraform (#153)",1,1,Yes,Yes
+C141,clouddrove/terraform-aws-global-accelerator,b29171b0f2385b3cfc515c2e5d0815a24c62140b,added examples,0,1,No,No
+C142,hashicorp/terraform,b06fe04621d7aa252ae616b209071a82b5d25dde,core: Check rule error message expressions,1,0,No,No
+C143,derBroBro/TerraDepot,962e94322a4c73cc5bc4f04c25f537adf18d473b,fix dependency for deployment,1,1,Yes,Yes
+C144,terraform-aws-modules/terraform-aws-rds,1e05556e6fef211ce88f7833541aa0bfdf3659ca,feat: Add restore_to_point_in_time support for databases (#338),0,1,No,No
+C145,elastic/terraform-provider-elasticstack,96d099b5fbdb3702d468a2432984eec701b59b45,"fix(fleet_output): space-aware destroy check, plain-ID import step, and variables.tf extraction",1,0,Yes,Yes
+C146,confluentinc/terraform-provider-confluent,df90d8c2a99b982c65dac79f45f605b435848425,#minor: prepare for v2.7.0 minor release (#465),0,0,No,No
+C147,terraform-aws-modules/terraform-aws-autoscaling,66239812b6afeafc9ecde97f0fef51d8f3fd0dda,fix: Restrict AWS provider version from using `v6.x` which contains breaking changes (#293),1,1,Yes,Yes
+C148,claranet/terraform-azurerm-vnet,975ed72836663dce08f6a5a976f1284e3d0d130d,refactor: apply suggestions,0,1,No,No
+C149,confluentinc/terraform-provider-confluent,0d7d3d71e74302e751005c981424e91dbb8376cb,API-1008: add more acls (#504),0,0,No,No
+C150,SPHTech-Platform/terraform-aws-eks,7f84af6f5d5f0072a8a1dd6afadff4eb182147f7,[PFMENG-3033] add exclude namespace for fluentbit logging (#164),0,1,No,No
+C151,claranet/terraform-azurerm-storage-account,b6e20c303b8b40613c44586aca9be7c37bac2d09,AZ-865: Fix Soft Delete for NFS 3.0 with Blob Storage,1,1,Yes,Yes
+C152,confluentinc/terraform-provider-confluent,8ca3ab3d066be75629fae928bcbed1a6b65991f0,#minor Prepare for 2.85.0 (hot-fix) (#1197),1,0,No,No
+C153,terraform-google-modules/terraform-google-log-export,86d638817306fad77e4756c116ceea976cedb567,chore: release 7.3.0 (#109),0,1,No,No
+C154,shuaibiyy/terraform-ecs-jenkins,194b949e49847252dd7bf7df70ca8e3fbcbc0660,Fix deprecation: using template_file as a resource is deprecated,1,1,Yes,Yes
+C155,cloudandthings/terraform-aws-clickops-notifier,b0369c1929d02eb46f6a304f8e678b445c31218a,fix: replace deprecated aws_region .name attribute with .id,1,1,Yes,Yes
+C156,terraform-google-modules/terraform-google-network,2e268edd925bd20147a69e6d322dfa69c1e21b64,chore(main): release 15.2.0 (#674),0,1,No,No
+C157,joshuamkite/terraform-aws-ssh-bastion-service,9f5fa25614c13c42abddc71d5ece091d9d56ed75,WIP broken,1,1,No,No
+C158,DNXLabs/terraform-aws-cognito,d17542c2841faa7d0926bf85bc452cc25cff31cd,Remove dynamic from `verification_message_template`,0,1,Yes,Yes
+C159,terraform-google-modules/terraform-google-composer,47fa9e047de078fd43602f522b9039cfe0ba9db9,chore(master): release 5.1.0 (#130),0,1,No,No
+C160,SPHTech-Platform/terraform-aws-opensearch,8e4951c75004fe00b21d5b1dda02639319c1bc44,adjust thresholds for jvm pressure cloudwatch alarms (#78),0,1,No,No
+C161,cloudposse/terraform-aws-efs,234010ce016ced26b97bcc58c7394888ecaf0d3e,Fix secondary gids and lifecycle hooks (#109),1,1,Yes,Yes
+C162,terraform-aws-modules/terraform-aws-dms,d3001146c9795ea7cc80831b4a0a27fce1391e6f,feat: Add support for additional `s3_settings` attributes on DMS endpoint for upstream https://github.com/hashicorp/terraform-provider-aws/pull/20913,0,1,No,No
+C163,tedilabs/terraform-aws-account,9c8751444e0eefad6810ed088e1a8bbdd73b9fc6,Fix bug of urn output in iam-oidc-identity-provider module,1,1,Yes,Yes
+C164,terraform-aws-modules/terraform-aws-elasticache,9048b3cb0746834688da7a54eeb545d3534c6887,feat: Default User ARN Output (#66),0,1,No,No
+C165,terraform-aws-modules/terraform-aws-lambda,1709b69a3ee551d297d116140d38f4157b669c94,feat: Add Lambda publish target support (#769),0,1,No,No
+C166,claranet/terraform-azurerm-bastion,5b88ed72980342e30bdd80d3d4cda332d837c9df,fix: update examples,1,1,No,Yes
+C167,terraform-google-modules/terraform-google-iam,d4e0a38a4f4ff4744549adbe34fd247d073abbf5,chore(deps): Update Terraform terraform-google-modules/project-factory/google to v15 (#220),0,0,No,No
+C168,tedilabs/terraform-aws-ecs,f538ed85cc30bc937d2bae558ff38e3495727c6e,chore(deps): align tedilabs child module version constraints with latest releases (#4),0,1,No,No
+C169,claranet/terraform-azurerm-storage-account,b7d78f6246d76c0dd332d74b5e3858783754e88d,fix: update `large_file_share_enabled` condition for storage account,1,1,Yes,Yes
+C170,signalsciences/terraform-provider-sigsci,7db11c60be18a310218cb1febe6d52edddf213e6,Added fixes for 0.4.2.  * Added warnings for unknown condition types  * Added Rule max length for conditions and actions  * Fix out of band deletions by returning nil instead of err  * Correctly set IDs for multiple resources so terraform will update instead of re-create  * Minor formatting,1,1,Yes,No
+C171,SPHTech-Platform/terraform-aws-eks,d5cd502e69b48ac1f27984560975dbc24fd1a872,changed cluster_name value in node_group.tf (#6),0,1,Yes,Yes
+C172,cloudposse/terraform-aws-key-pair,22b1fe019546085ba1d6ca51cd8e3fce8a4e3914,Add a `private_key` output (#40),0,1,No,No
+C173,btobolaski/terraform-provider-linode,65e081f8a0e9f6c6220f35919a6a5c4c1b9d59b1,"fixes for private ip, configs, image ids, api error handling",1,0,Yes,No
+C174,claranet/terraform-azurerm-storage-account,bb74e69d3a25b860d3560c95a35d469508825922,AZ-995: Fix largefile activation if not LRS or ZRS,1,1,Yes,Yes
+C175,chanzuckerberg/fogg,3a7445bc4f60494b013e1e2ac9dcde497fcdf854,fix: Update dependencies and fix unit tests (#776),1,0,No,No
+C176,cloudposse/terraform-aws-alb,864b57c1a2909e23e94560b6ffc548639736bb3b,add preserve host header option (#124),0,1,No,No
+C177,cloudposse/terraform-aws-rds,f3c6b43a6da61cb71310e750f2768ef79af53583,chore(deps): update terraform cloudposse/vpc/aws to v2.1.1 (#162),0,0,No,No
+C178,terraform-aws-modules/terraform-aws-elasticache,f91028dc62cae00249ecc2709f06cb1be3a961de,feat: Support elasticache serverless cache (#3),0,1,No,No
+C179,neiman-marcus/terraform-aws-jenkins-ha-agents,4ec4b9c4112bf26d2b80cd3a9e743931b2a95ba7,Update to jenkins 2.235.2.,0,1,No,No
+C180,SPHTech-Platform/terraform-aws-eks,0114a9750da40e5967ad25cb2c5e8fd9edf3d61b,feat: add vpc_cni_env passthrough for VPC CNI addon configuration (#206),0,1,No,No
+C181,terraform-aws-modules/terraform-aws-rds,8b8f9b7bc9f0a88e645307260a65d9ec27369c6a,fix: default to AWS provided option and parameter groups when not creating nor providing (#308),1,1,Yes,Yes
+C182,clouddrove/terraform-aws-global-accelerator,63461de010be209acdf544a130399e28723d5132,bug: updated changelog.md,1,0,No,No
+C183,cloudposse/terraform-aws-rds,893eef82cf5ecc848acbb156d4441e4b98359580,feat(rds_instance): support blue green deployments (#206),0,1,No,No
+C184,terraform-aws-modules/terraform-aws-route53,47262df81f7dd07a8dc4b99f97b8f69178088f7f,fix: Fixed records with different length (#54),1,0,Yes,Yes
+C185,neiman-marcus/terraform-aws-jenkins-ha-agents,2ee599426b27c93a671f33415b0d83d1a599a163,added cli v2 installation and changed templatefile syntax,0,1,No,No
+C186,terraform-aws-modules/terraform-aws-atlantis,0b17a4102f5f21e7a6de72a3b9ed7760c4ca7c9a,fix: atlantis health check path (#242),1,1,Yes,Yes
+C187,terraform-aws-modules/terraform-aws-atlantis,b6b3fcced034988dfbdd6fea81cedd366380d611,fix: Update deprecated ALB listener rule format (#89),1,1,Yes,Yes
+C188,terraform-google-modules/terraform-google-iam,07c4031bd140be7087084eca9d2b6c246e3faa86,chore(master): release 7.7.0 (#191),0,1,No,No
+C189,terraform-aws-modules/terraform-aws-atlantis,42aaff07428e8ce41c03f9f90bb5ec9a7a948e52,Added a task role to the container,0,1,No,No
+C190,terraform-google-modules/terraform-google-network,d0903ad9b71b74278945500eaa69d6f14d0d7474,Add tests for allowed internal rules,0,0,No,No
+C191,confluentinc/terraform-provider-confluent,d596e585947d7cf6cf77188544f2fa53cd348c26,#minor Prepare for 2.51.0 release (#879),0,0,No,No
+C192,joshuamkite/terraform-aws-ssh-bastion-service,5e704a9a40071f22fb527cc874dd73e691981bfa,clean up code and update documentation,0,1,No,No
+C193,DNXLabs/terraform-aws-transit-gateway,2f5c939a0ea9f1108bd06aaca019a36dd234d66b,Set auto_accept_shared_attachments default to enable to prevent drift in existing resources,0,1,Yes,Yes
+C194,terraform-aws-modules/terraform-aws-route53,be85f8ab1465ebc96bd70f7397881e901753d5bc,fix: use tomap() instead of type declaration object() (#14),1,0,Yes,Yes
+C195,cloudposse/terraform-aws-dynamodb,7f1a7b04268a507cd82abfa0110fc8c39394f077,Fix Perma-Drift with Replicas (#107),1,1,Yes,Yes
+C196,claranet/terraform-azurerm-bastion,014583e8910e234523009d43b918032acc9efacd,AZ-804 Add new options,0,1,No,No
+C197,terraform-google-modules/terraform-google-log-export,3f7e6bba2bb63590df68d55245d16b7fd0970c69,fix: relax random provider version requirement (#139),1,1,Yes,Yes
+C198,joshuamkite/terraform-aws-ssh-bastion-service,7cadad66dd276e125f4f6cc304a8f3333b92dac5,add logic test for custom ssh_populatem script,0,1,No,No
+C199,tedilabs/terraform-aws-account,f2c2cc6381023c57f0b81d30fe13ec497a93a4c6,fix(iam-service-linked-role): include custom suffix in metadata name (#142),1,1,Yes,Yes
+C200,terraform-aws-modules/terraform-aws-lambda,66eb330d4352a2bd95feded7f17f4c5046175aa5,feat: Allow multiple filters in event source mappings (#379),0,1,No,No

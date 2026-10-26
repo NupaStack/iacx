@@ -1,0 +1,134 @@
+{
+ "n": 200,
+ "pool_flagged": 1186,
+ "pool_unflagged": 5089,
+ "agreement_3cat": 0.97,
+ "kappa_3cat": 0.937,
+ "agreement_binary": 0.97,
+ "kappa_binary": 0.937,
+ "confusion": {
+  "Yes/Yes": 74,
+  "No/No": 120,
+  "No/Yes": 3,
+  "Yes/No": 3
+ },
+ "disagreements": 6,
+ "estimates": {
+  "all/strict": {
+   "n_flagged": 100,
+   "n_unflagged": 100,
+   "precision": 0.68,
+   "precision_ci": [
+    0.583,
+    0.772
+   ],
+   "missed_rate": 0.06,
+   "missed_ci": [
+    0.011,
+    0.119
+   ],
+   "recall_est": 0.725,
+   "recall_ci": [
+    0.573,
+    0.931
+   ]
+  },
+  "all/lenient": {
+   "n_flagged": 100,
+   "n_unflagged": 100,
+   "precision": 0.72,
+   "precision_ci": [
+    0.628,
+    0.807
+   ],
+   "missed_rate": 0.08,
+   "missed_ci": [
+    0.029,
+    0.143
+   ],
+   "recall_est": 0.677,
+   "recall_ci": [
+    0.536,
+    0.855
+   ]
+  },
+  "reusable/strict": {
+   "n_flagged": 75,
+   "n_unflagged": 84,
+   "precision": 0.76,
+   "precision_ci": [
+    0.675,
+    0.847
+   ],
+   "missed_rate": 0.071,
+   "missed_ci": [
+    0.014,
+    0.14
+   ],
+   "recall_est": 0.713,
+   "recall_ci": [
+    0.558,
+    0.927
+   ]
+  },
+  "reusable/lenient": {
+   "n_flagged": 75,
+   "n_unflagged": 84,
+   "precision": 0.8,
+   "precision_ci": [
+    0.719,
+    0.878
+   ],
+   "missed_rate": 0.095,
+   "missed_ci": [
+    0.035,
+    0.164
+   ],
+   "recall_est": 0.662,
+   "recall_ci": [
+    0.527,
+    0.846
+   ]
+  },
+  "fixtures/strict": {
+   "n_flagged": 25,
+   "n_unflagged": 16,
+   "precision": 0.44,
+   "precision_ci": [
+    0.222,
+    0.65
+   ],
+   "missed_rate": 0.0,
+   "missed_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_est": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "fixtures/lenient": {
+   "n_flagged": 25,
+   "n_unflagged": 16,
+   "precision": 0.48,
+   "precision_ci": [
+    0.261,
+    0.682
+   ],
+   "missed_rate": 0.0,
+   "missed_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_est": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "n_repos": 69,
+ "n_reusable": 159
+}

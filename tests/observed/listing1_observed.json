@@ -1,0 +1,113 @@
+{
+ "tool_version": "1.0.0",
+ "cases": {
+  "base": {
+   "vertices": [
+    "aws_route_table.rt",
+    "aws_route_table_association.assoc",
+    "aws_s3_bucket.audit",
+    "aws_subnet.private",
+    "aws_vpc.main",
+    "local.name",
+    "module.logging",
+    "output.subnet_ids",
+    "var.az_count",
+    "var.env"
+   ],
+   "edges": [
+    "aws_route_table.rt -> aws_route_table_association.assoc",
+    "aws_subnet.private -> aws_route_table_association.assoc",
+    "aws_subnet.private -> output.subnet_ids",
+    "aws_vpc.main -> aws_route_table.rt",
+    "aws_vpc.main -> aws_subnet.private",
+    "aws_vpc.main -> module.logging",
+    "local.name -> aws_vpc.main",
+    "var.az_count -> aws_subnet.private",
+    "var.env -> local.name"
+   ],
+   "measures": {
+    "nodes": 10,
+    "edges": 9,
+    "D_depth": 4,
+    "P_propagation": 18,
+    "X_expression": 1.5,
+    "M_modularity": 1,
+    "K_crossing": 1,
+    "IaCX": 25.5,
+    "cyclic": false
+   }
+  },
+  "reordered": {
+   "vertices": [
+    "aws_route_table.rt",
+    "aws_route_table_association.assoc",
+    "aws_s3_bucket.audit",
+    "aws_subnet.private",
+    "aws_vpc.main",
+    "local.name",
+    "module.logging",
+    "output.subnet_ids",
+    "var.az_count",
+    "var.env"
+   ],
+   "edges": [
+    "aws_route_table.rt -> aws_route_table_association.assoc",
+    "aws_subnet.private -> aws_route_table_association.assoc",
+    "aws_subnet.private -> output.subnet_ids",
+    "aws_vpc.main -> aws_route_table.rt",
+    "aws_vpc.main -> aws_subnet.private",
+    "aws_vpc.main -> module.logging",
+    "local.name -> aws_vpc.main",
+    "var.az_count -> aws_subnet.private",
+    "var.env -> local.name"
+   ],
+   "measures": {
+    "nodes": 10,
+    "edges": 9,
+    "D_depth": 4,
+    "P_propagation": 18,
+    "X_expression": 1.5,
+    "M_modularity": 1,
+    "K_crossing": 1,
+    "IaCX": 25.5,
+    "cyclic": false
+   }
+  },
+  "rewired": {
+   "vertices": [
+    "aws_route_table.rt",
+    "aws_route_table_association.assoc",
+    "aws_s3_bucket.audit",
+    "aws_subnet.private",
+    "aws_vpc.main",
+    "local.name",
+    "module.logging",
+    "output.subnet_ids",
+    "var.az_count",
+    "var.env"
+   ],
+   "edges": [
+    "aws_route_table.rt -> aws_route_table_association.assoc",
+    "aws_route_table.rt -> aws_subnet.private",
+    "aws_subnet.private -> aws_route_table_association.assoc",
+    "aws_subnet.private -> output.subnet_ids",
+    "aws_vpc.main -> aws_route_table.rt",
+    "aws_vpc.main -> module.logging",
+    "local.name -> aws_vpc.main",
+    "var.az_count -> aws_subnet.private",
+    "var.env -> local.name"
+   ],
+   "measures": {
+    "nodes": 10,
+    "edges": 9,
+    "D_depth": 5,
+    "P_propagation": 18,
+    "X_expression": 1.5,
+    "M_modularity": 1,
+    "K_crossing": 1,
+    "IaCX": 26.5,
+    "cyclic": false
+   }
+  }
+ }
+}

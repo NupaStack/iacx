@@ -1,0 +1,172 @@
+{
+ "candidates": 542,
+ "processed": 542,
+ "status_counts": {
+  "ok": 443,
+  "no_tf_history": 98,
+  "clone_failed": 1
+ },
+ "ok_in_dataset": 423,
+ "ok_exact_match": 420,
+ "ok_not_in_dataset": 20,
+ "dataset_repos_total": 423,
+ "dataset_repos_processed_ok": 423,
+ "clone_failed_repos": [
+  "kjanshair/terraform-azurerm-aks"
+ ],
+ "directories_remeasured": 20263,
+ "dir_parse_fail_total": 799,
+ "dir_with_file_parse_errors": 26,
+ "dir_cyclic": 110,
+ "dir_with_tf_json": 0,
+ "dir_with_override": 47,
+ "dataset_rows_matched_by_path": 19365,
+ "identical_blocks_edges": 19353,
+ "identical_file_change_counts": 19362,
+ "a3_cohort_dirs": 19464,
+ "a3_cohort_repos": 423,
+ "a3": {
+  "edges": {
+   "before": 17336,
+   "after": 171339,
+   "ratio": 9.88
+  },
+  "D": {
+   "before": 3126,
+   "after": 31945,
+   "ratio": 10.22
+  },
+  "P": {
+   "before": 24907,
+   "after": 521959,
+   "ratio": 20.96
+  },
+  "K": {
+   "before": 3823,
+   "after": 32643,
+   "ratio": 8.54
+  },
+  "blocks": {
+   "before": 181814,
+   "after": 179077,
+   "ratio": 0.98
+  },
+  "nodes": {
+   "before": 161656,
+   "after": 159565,
+   "ratio": 0.99
+  }
+ },
+ "a3_eligible_same_cohort": 6306,
+ "a3_pct_with_edge": {
+  "before": 25.0,
+  "after": 92.0
+ },
+ "a3_blocks_identical_pct": 89.75,
+ "a3_nodes_diff_mean": 0.107,
+ "primary_n": 732,
+ "primary_with_remine": 732,
+ "exposure": {
+  "n": 732,
+  "median_days": 1559.4,
+  "rho_span_exposure": 0.965
+ },
+ "exposure_models": {
+  "base": 0.8504,
+  "base+expo": 0.8798,
+  "base+expo+sum": 0.879,
+  "base+expo+five": 0.8799,
+  "base+expo+edges": 0.8778,
+  "base+span": 0.8882
+ },
+ "exposure_diffs": {
+  "expo | base": {
+   "diff": 0.0294,
+   "ci": [
+    0.0118,
+    0.0481
+   ]
+  },
+  "sum | base+expo": {
+   "diff": -0.0008,
+   "ci": [
+    -0.0075,
+    0.0064
+   ]
+  },
+  "five | base+expo": {
+   "diff": 0.0,
+   "ci": [
+    -0.0182,
+    0.0163
+   ]
+  },
+  "edges | base+expo": {
+   "diff": -0.0021,
+   "ci": [
+    -0.0145,
+    0.0096
+   ]
+  }
+ },
+ "distinct_commits": {
+  "n": 694,
+  "repos": 266,
+  "events": 535,
+  "base_auc": 0.8497,
+  "d_sum": {
+   "diff": -0.0008,
+   "ci": [
+    -0.0085,
+    0.0071
+   ]
+  },
+  "d_five": {
+   "diff": 0.0062,
+   "ci": [
+    -0.0048,
+    0.0171
+   ]
+  },
+  "d_edges": {
+   "diff": 0.0025,
+   "ci": [
+    -0.0091,
+    0.0154
+   ]
+  },
+  "rho_sum": 0.502,
+  "rho_loc": 0.517
+ },
+ "distinct_commits_nobot": {
+  "n": 694,
+  "repos": 266,
+  "events": 535,
+  "base_auc": 0.8508,
+  "d_sum": {
+   "diff": -0.0006,
+   "ci": [
+    -0.0081,
+    0.0071
+   ]
+  },
+  "d_five": {
+   "diff": 0.0059,
+   "ci": [
+    -0.0049,
+    0.0167
+   ]
+  },
+  "d_edges": {
+   "diff": 0.0027,
+   "ci": [
+    -0.0093,
+    0.017
+   ]
+  },
+  "rho_sum": 0.505,
+  "rho_loc": 0.519
+ },
+ "bot_commit_share_primary": 0.1902,
+ "file_change_vs_commit_ratio_primary": 1.816
+}

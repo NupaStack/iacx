@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "IaCX: static structural measures for Terraform modules"
+version: "1.0.0"
+date-released: "2026-10-26"
+license: MIT
+repository-code: "https://github.com/NupaStack/iacx"
+authors:
+  - family-names: Kulathunga
+    given-names: Anupa
+    affiliation: NupaStack LLC
+  - family-names: De Silva
+    given-names: Dilshan
+    affiliation: Sri Lanka Institute of Information Technology
